@@ -3,7 +3,7 @@ import Layout from "../layouts/Layout.astro";
 import '../styles/global.css';
 import Navigation from "../components/Navigation.astro";
 
-const pageTitle = "Dan Me";
+const pageTitle = "pomiusu";
 
 const identity = {
   firstName: "Daniel Kondlatsch",
@@ -25,7 +25,6 @@ const textCase = "uppercase";
 
 <Layout title={pageTitle}>
   <main>
-    <Navigation />
     <h1>Sobre mim<span class="text-gradient">{pageTitle}</span></h1>
     <p>Here are a few facts about me:</p>
     <ul>
@@ -62,13 +61,7 @@ const textCase = "uppercase";
 </Layout>
 
 <style define:vars={{skillColor, fontWeight, textCase}}>
-  h1 {
-    color: purple;
-    font-size: 4rem;
-  }
-  .skill {
-    color: var(--skillColor);
-    font-weight: var(--fontWeight);
-	text-transform: var(--textCase);
+  h1{
+  color: blue;
   }
 </style>

@@ -1,5 +1,43 @@
 ---
 ---
-<a href="/">Home</a>
-<a href="/about/">About</a>
-<a href="/blog/">Blog</a>
+<div class="headerWrapper">
+    <div class="logoWrapper">
+        <p>pomiusu</p>
+    </div>
+    
+    <div class="linksWrapper">
+        <a href="/">Home</a>
+        <a href="/about/">About</a>
+        <a href="/blog/">Blog</a>
+    </div>
+</div>
+
+
+<style>
+.headerWrapper {
+    width: 100vw;
+    height: 6vh;
+    max-height: 6vh;
+    padding: 3em 18em;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.logoWrapper{
+    font-weight: bold;
+    font-size: 1.5em;
+    display: flex;
+}
+.linksWrapper{
+     display: flex;
+     justify-content: space-between;
+     gap: 2em
+}
+a{
+    text-decoration: none;
+    color: black;
+    font-size: 1.4em;
+}
+</style>
