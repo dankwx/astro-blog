@@ -12,8 +12,9 @@ import Navigation from "../components/Navigation.astro";
       Sou um desenvolvedor <span>front-end</span> que gosta de construir site pra
       <span>tudo</span> que eu consigo imaginar
     </p>
-    <hr />
   </main>
+  <div class="hrWrapper">
+  </div>
 </Layout>
 
 <style>
@@ -35,5 +36,10 @@ span{
 }
 span:last-child{
   color: #e9c46a;
+}
+.hrWrapper{
+  width: 100%;
+  height: 0.2vh;
+  background-color:black;
 }
 </style>
