@@ -6,14 +6,34 @@ import Navigation from "../components/Navigation.astro";
 
 <Layout title="Daniel Kondlatsch - dankwx">
   <main>
-    <p>🖖 eu faço sites.</p>
+    <p class="teaser">🖖 eu faço sites.</p>
     <h1>Daniel Kondlatsch</h1>
+    <p class="description">
+      Sou um desenvolvedor <span>front-end</span> que gosta de construir site pra
+      <span>tudo</span> que eu consigo imaginar
+    </p>
+    <hr />
   </main>
 </Layout>
 
 <style>
-p{
-  padding: 2.6em 0;
+.teaser{
+  padding-top: 2.6em;
   font-size: 1.4em;
+}
+h1{
+  font-size: 4.4em;
+  padding-top:0.4em;
+}
+.description{
+  font-size: 2.4em;
+}
+span{
+  font-style: italic;
+  /* https://coolors.co/palette/ffa69e-faf3dd-b8f2e6-aed9e0-5e6472 */
+  color: #ffa69e;
+}
+span:last-child{
+  color: #e9c46a;
 }
 </style>
