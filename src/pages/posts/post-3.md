@@ -10,4 +10,15 @@ pubDate: 2022-07-15
 tags: ["astro", "learning in public", "setbacks", "community"]
 ---
 
+<style>
+  main{
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+</style>
+
 It wasn't always smooth sailing, but I'm enjoying building with Astro. And, the [Discord community](https://astro.build/chat) is really friendly and helpful!

@@ -1,6 +1,6 @@
 ---
 layout: "../../layouts/PostLayout.astro"
-title: "My First Blog Post"
+title: "O que eu aprendi criando este blog com Astro.js"
 pubDate: 2022-07-01
 description: "This is the first post of my new Astro blog."
 author: "Astro Learner"
@@ -11,9 +11,6 @@ tags: ["astro", "blogging", "learning in public"]
 ---
 
 <style>
-  *{
-    box-sizing: border-box;
-  }
   main{
     width: 100%;
     max-width: 100%;
@@ -26,8 +23,6 @@ tags: ["astro", "blogging", "learning in public"]
 
 <PostLayout>
 <main>
-
-# My First Blog Post
 
 Published on: 2022-07-01
 
