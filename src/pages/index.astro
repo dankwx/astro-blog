@@ -9,14 +9,28 @@ import Navigation from "../components/Navigation.astro";
     <p class="teaser">🖖 eu faço sites.</p>
     <h1>Daniel Kondlatsch</h1>
     <p class="description">
-      Sou um desenvolvedor <span>front-end</span> que gosta de construir site pra
-      <span>tudo</span> que eu consigo imaginar
+      Sou um desenvolvedor <span class="descriptionSpam">front-end</span> que gosta de construir site pra
+      <span class="descriptionSpam">tudo</span> que eu consigo imaginar
     </p>
   </main>
   <div class="hrWrapper">
   </div>
   <div class="postsWrapper">
-    <h1>Posts</h1>
+    <h1 class="postSectionTitle">Posts</h1>
+    <div class="cardsWrapper">
+      <a class="card">
+        <article>
+            <div class="postName">
+            <h3>Section 1.10.33 of "de Finibus Bonorum et Malorum", written by Cicero in 45 BC</h3>
+            <span>technology</span>
+            </div>
+            <div class="postDate">
+              <span>dd/mm/yyyy</span>
+            </div>
+          </article>
+      </a>
+      
+    </div>
   </div>
 </Layout>
 
@@ -32,12 +46,12 @@ h1{
 .description{
   font-size: 2.4em;
 }
-span{
+.descriptionSpam{
   font-style: italic;
   /* https://coolors.co/palette/ffa69e-faf3dd-b8f2e6-aed9e0-5e6472 */
   color: #ffa69e;
 }
-span:last-child{
+.descriptionSpam:last-child{
   color: #e9c46a;
 }
 .hrWrapper{
@@ -45,8 +59,51 @@ span:last-child{
   height: 0.2vh;
   background-color:black;
 }
+.postSectionTitle{
+  margin-bottom:1em;
+}
 .postsWrapper{
   margin:auto;
   max-width: 90ch;
+}
+.cardsWrapper{
+  box-sizing: border-box;
+}
+a{
+  width: 100%;
+  height: auto;
+  border: solid 2px;
+  margin-bottom: 1rem;
+  display: block;
+  box-sizing: border-box;
+  padding: 2em 0;
+}
+article{
+  width:100%;
+  height: 100%;
+  display:flex;
+  justify-content: space-between;
+  align-items:center;
+  padding: 0 2em;
+}
+.postName{
+  display: flex;
+  flex-direction: column;
+  background-color:yellow;
+  justify-content: center;
+  height: 100%;
+  gap: 1em
+}
+h3{
+  margin:0;
+  font-size: 2em;
+}
+.postDate{
+  background-color:brown;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}span{
+  font-size:1.4em;
 }
 </style>
