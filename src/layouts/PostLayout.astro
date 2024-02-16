@@ -3,12 +3,50 @@ import "../styles/global.css";
 import Navigation from "../components/Navigation.astro";
 import Footer from "../components/Footer.astro";
 
-const {frontmatter} = Astro.props;
+const { frontmatter } = Astro.props;
+
+function formatarData(data: string) {
+  const nomesMeses = [
+    "Janeiro",
+    "Fevereiro",
+    "Março",
+    "Abril",
+    "Maio",
+    "Junho",
+    "Julho",
+    "Agosto",
+    "Setembro",
+    "Outubro",
+    "Novembro",
+    "Dezembro",
+  ];
+
+  const dataObj = new Date(data);
+  const dia = String(dataObj.getDate()).padStart(2, "0");
+  const mes = nomesMeses[dataObj.getMonth()];
+  const ano = dataObj.getFullYear();
+
+  return `${dia} de ${mes}, ${ano}`;
+}
 ---
 
+<Navigation />
 <main>
-    <Navigation />
-    <h1>{frontmatter.title}</h1>
-    <slot />
-    <Footer />
+  <h1>{frontmatter.title}</h1>
+  <p>{formatarData(frontmatter.pubDate)}</p>
+  <slot />
 </main>
+<Footer />
+
+<style>
+  p {
+    --tw-text-opacity: 1;
+    color: rgb(91, 91, 91);
+    margin-bottom: 2em;
+  }
+  main {
+    max-width: 50%;
+    display: flex;
+    justify-content: center;
+  }
+</style>
