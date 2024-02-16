@@ -24,6 +24,13 @@ tags: ["astro", "blogging", "learning in public"]
   main h2{
     font-size:1.8rem
   }
+  
+  img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+  }
 
 </style>
 
@@ -101,25 +108,44 @@ Parece que o Astro se encaixou perfeitamente e supriu todas minhas necessidades,
 nada poderia ser melhor. Mas além disso, outras coisas me deixaram confiante nessa
 escolha, como por exemplo esse gráfico de comparação com outros frameworks:
 
-<img src="https://marinegeo.github.io/assets/img/MarineGEO_logo.png" alt="MarineGEO circle logo" style="height: 100px; width:100px;"/>
+<img src="../../../public/cwvtest.png" alt="Gráfico: Teste de Performance CWV" style="height: 416px; width:666px;"/>
+<p style="text-align: center; margin:0">Comparação de performance no teste CWV</p>
+<a href="https://astro.build/blog/2023-web-framework-performance-report/"
+style="text-align: center; margin-top: 0; margin-bottom: 1em; font-size: 0.8rem; text-decoration: none; color: #415a77;">
+Astro Blog 2023 Web Framework Performance Report
+</a>
 
+<img src="../../../public/lighthousespeed.png" alt="Gráfico: Teste de Performance Lighthouse" style="height: 416px; width:666px;"/>
+<p style="text-align: center; margin:0">Comparação de performance no teste Lighthouse</p>
+<a href="https://astro.build/blog/2023-web-framework-performance-report/"
+style="text-align: center; margin-top: 0; margin-bottom: 1em; font-size: 0.8rem; text-decoration: none; color: #415a77;">
+Astro Blog 2023 Web Framework Performance Report
+</a>
 
+Como da pra ver, são ótimos resultados e que se sobrepõem muito bem com seus
+concorrentes.
 
-## What's next
+O teste **CWV** da primeira imagem é um teste com dados de pessoas do mundo real, é um jeito
+direto de ver como elas experenciam o site, principalmente entre longas sessões dentro
+dos sites.
 
-I will finish the Astro tutorial, and then keep adding more posts. Watch this space for more to come.
+Já o teste **Lighthouse**, é mais focado para performance do primeiro carregamento da página,
+simplesmente o quão rápido a página carrega para o usuário poder utilizá-la.
 
-## What's next
+Nesse mesmo blog em que retirei estas informações possuem mais gráficos de outros testes,
+recomendo dar uma olhada, as informações são bem neutras e contando com todas condições
+levado em conta.
 
-I will finish the Astro tutorial, and then keep adding more posts. Watch this space for more to come.
+## Conclusão
 
-## What's next
+Bom, eu tive uma ótima experiência utilizando o Astro.js, e recomendo a todos
+que possam estar na mesma posição que eu estava antes de criar esse blog. Definitivamente
+vale a pena reservar pelo menos 1 hora para criar um projeto em Astro e sentir como é
+o desenvolvimento com ele.
 
-I will finish the Astro tutorial, and then keep adding more posts. Watch this space for more to come.
+E claro, esse site é feito completamente em Astro.js, você pode tirar suas próprias
+conclusões.
 
-## What's next
-
-I will finish the Astro tutorial, and then keep adding more posts. Watch this space for more to come.
-
+👋
 </main>
 </PostLayout>
