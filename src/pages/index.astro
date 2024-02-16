@@ -122,6 +122,19 @@ import Navigation from "../components/Navigation.astro";
     display: block;
     box-sizing: border-box;
     padding: 2em 0;
+    cursor: pointer;
+    box-shadow:
+      1px 1px 0 0 #ffd6ba,
+      2px 2px 0 0 #ffd6ba,
+      3px 3px 0 0 #ffd6ba,
+      4px 4px 0 0 #ffd6ba,
+      5px 5px 0 0 #ffd6ba,
+      6px 6px 0 0 #ffd6ba;
+
+    transition: box-shadow 0.3s ease;
+  }
+  a:hover {
+    box-shadow: none;
   }
   article {
     width: 100%;
