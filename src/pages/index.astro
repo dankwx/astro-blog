@@ -7,103 +7,130 @@ import Navigation from "../components/Navigation.astro";
 <Layout title="Daniel Kondlatsch - dankwx">
   <main>
     <p class="teaser">🖖 eu faço sites.</p>
-    <h1>Daniel Kondlatsch</h1>
+    <h1 class="name">Daniel Kondlatsch</h1>
     <p class="description">
-      Sou um desenvolvedor <span class="descriptionSpam">front-end</span> que gosta de construir site pra
+      Sou um desenvolvedor <span class="descriptionSpam">front-end</span> que gosta
+      de construir site pra
       <span class="descriptionSpam">tudo</span> que eu consigo imaginar
     </p>
   </main>
-  <div class="hrWrapper">
-  </div>
+  <div class="hrWrapper"></div>
   <div class="postsWrapper">
     <h1 class="postSectionTitle">Posts</h1>
     <div class="cardsWrapper">
       <a class="card">
         <article>
-            <div class="postName">
-            <h3>Section 1.10.33 of "de Finibus Bonorum et Malorum", written by Cicero in 45 BC</h3>
+          <div class="postName">
+            <h3>
+              Section 1.10.33 of "de Finibus Bonorum et Malorum", written by
+              Cicero in 45 BC
+            </h3>
             <span>technology</span>
-            </div>
-            <div class="postDate">
-              <span>dd/mm/yyyy</span>
-            </div>
-          </article>
+          </div>
+          <div class="postDate">
+            <span>dd/mm/yyyy</span>
+          </div>
+        </article>
       </a>
-      
     </div>
   </div>
 </Layout>
 
 <style>
-.teaser{
-  padding-top: 2.6em;
-  font-size: 1.4em;
-}
-h1{
-  font-size: 4.4em;
-  padding-top:0.4em;
-}
-.description{
-  font-size: 2.4em;
-}
-.descriptionSpam{
-  font-style: italic;
-  /* https://coolors.co/palette/ffa69e-faf3dd-b8f2e6-aed9e0-5e6472 */
-  color: #ffa69e;
-}
-.descriptionSpam:last-child{
-  color: #e9c46a;
-}
-.hrWrapper{
-  width: 100%;
-  height: 0.2vh;
-  background-color:black;
-}
-.postSectionTitle{
-  margin-bottom:1em;
-}
-.postsWrapper{
-  margin:auto;
-  max-width: 90ch;
-}
-.cardsWrapper{
-  box-sizing: border-box;
-}
-a{
-  width: 100%;
-  height: auto;
-  border: solid 2px;
-  margin-bottom: 1rem;
-  display: block;
-  box-sizing: border-box;
-  padding: 2em 0;
-}
-article{
-  width:100%;
-  height: 100%;
-  display:flex;
-  justify-content: space-between;
-  align-items:center;
-  padding: 0 2em;
-}
-.postName{
-  display: flex;
-  flex-direction: column;
-  background-color:yellow;
-  justify-content: center;
-  height: 100%;
-  gap: 1em
-}
-h3{
-  margin:0;
-  font-size: 2em;
-}
-.postDate{
-  background-color:brown;
-  height: 100%;
-  display: flex;
-  align-items: center;
-}span{
-  font-size:1.4em;
-}
+  @import url("https://fonts.googleapis.com/css2?family=Aleo:ital,wght@0,100..900;1,100..900&display=swap");
+  .teaser {
+    padding-top: 2.6em;
+    font-size: 1.4em;
+  }
+  .name {
+    font-size: 4.4em;
+    font-weight: bold;
+    padding-top: 0.4em;
+    font-family: "Aleo", serif;
+    text-shadow:
+      7.25px 0.25px 0 #ffd6ba,
+      0.5px 0.5px 0 #ffd6ba,
+      0.75px 0.75px 0 #ffd6ba,
+      1px 1px 0 #ffd6ba,
+      1.25px 1.25px 0 #ffd6ba,
+      1.5px 1.5px 0 #ffd6ba,
+      1.75px 1.75px 0 #ffd6ba,
+      2px 2px 0 #ffd6ba,
+      2.25px 2.25px 0 #ffd6ba,
+      2.5px 2.5px 0 #ffd6ba,
+      2.75px 2.75px 0 #ffd6ba,
+      3px 3px 0 #ffd6ba,
+      3.25px 3.25px 0 #ffd6ba,
+      3.5px 3.5px 0 #ffd6ba,
+      3.75px 3.75px 0 #ffd6ba,
+      4px 4px 0 #ffd6ba,
+      5.25px 5.25px 0 #ffd6ba,
+      5.5px 5.5px 0 #ffd6ba,
+      5.75px 5.75px 0 #ffd6ba,
+      6px 6px 0 #ffd6ba;
+  }
+  .description {
+    font-size: 2.4em;
+  }
+  .descriptionSpam {
+    font-style: italic;
+    /* https://coolors.co/palette/ffa69e-faf3dd-b8f2e6-aed9e0-5e6472 */
+    color: #ffa69e;
+  }
+  .descriptionSpam:last-child {
+    color: #e9c46a;
+  }
+  .hrWrapper {
+    width: 100%;
+    height: 0.2vh;
+    background-color: black;
+  }
+  .postSectionTitle {
+    font-size: 3.4em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+  }
+  .postsWrapper {
+    margin: auto;
+    max-width: 90ch;
+  }
+  .cardsWrapper {
+    box-sizing: border-box;
+  }
+  a {
+    width: 100%;
+    height: auto;
+    border: solid 2px;
+    margin-bottom: 1rem;
+    display: block;
+    box-sizing: border-box;
+    padding: 2em 0;
+  }
+  article {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2em;
+  }
+  .postName {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    gap: 1em;
+  }
+  h3 {
+    margin: 0;
+    font-size: 2em;
+  }
+  .postDate {
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+  span {
+    font-size: 1.4em;
+  }
 </style>
