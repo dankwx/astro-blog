@@ -21,6 +21,10 @@ tags: ["astro", "blogging", "learning in public"]
     display: flex;
     justify-content: center;
   }
+  .markdownContent p{
+    margin-top: 1em;
+    margin-bottom: 1em;
+  }
   .markdownBase{
     width: 55%;
   }
@@ -46,11 +50,11 @@ tags: ["astro", "blogging", "learning in public"]
 
   }
 
-  .imgContainer img{
+  .markdownBase img{
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 50%;
+    max-width: 100%;
   }
 
   .imgContainer{
@@ -150,15 +154,17 @@ Parece que o Astro se encaixou perfeitamente e supriu todas minhas necessidades,
 nada poderia ser melhor. Mas além disso, outras coisas me deixaram confiante nessa
 escolha, como por exemplo esse gráfico de comparação com outros frameworks:
 
+![Astro](../../../public/cwvtest.png)
+
 <div class="imgContainer">
-<img src="../../../public/cwvtest.png" alt="Gráfico: Teste de Performance CWV" style="height: 416px; width:666px;"/>
 <p style="text-align: center; margin:0">Comparação de performance no teste CWV</p>
 <a href="https://astro.build/blog/2023-web-framework-performance-report/">
 Astro Blog 2023 Web Framework Performance Report
 </a>
 
+![Astro](../../../public/lighthousespeed.png)
+
 <div class="imgContainer">
-<img src="../../../public/lighthousespeed.png" alt="Gráfico: Teste de Performance Lighthouse" style="height: 416px; width:666px;"/>
 <p style="text-align: center; margin:0">Comparação de performance no teste Lighthouse</p>
 <a href="https://astro.build/blog/2023-web-framework-performance-report/">
 Astro Blog 2023 Web Framework Performance Report
