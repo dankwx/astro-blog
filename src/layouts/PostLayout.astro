@@ -1,5 +1,5 @@
 ---
-import "../styles/global.css";
+import "../styles/postGlobal.css";
 import Navigation from "../components/Navigation.astro";
 import Footer from "../components/Footer.astro";
 
@@ -30,23 +30,8 @@ function formatarData(data: string) {
 }
 ---
 
-<Navigation />
 <main>
-  <h1>{frontmatter.title}</h1>
-  <p>{formatarData(frontmatter.pubDate)}</p>
+  <Navigation />
   <slot />
+  <Footer />
 </main>
-<Footer />
-
-<style>
-  p {
-    --tw-text-opacity: 1;
-    color: rgb(91, 91, 91);
-    margin-bottom: 2em;
-  }
-  main {
-    max-width: 50%;
-    display: flex;
-    justify-content: center;
-  }
-</style>

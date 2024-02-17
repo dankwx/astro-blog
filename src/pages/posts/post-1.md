@@ -1,7 +1,7 @@
 ---
 layout: "../../layouts/PostLayout.astro"
 title: "O que me levou a escolher entre Astro e não Next.js"
-pubDate: 02-16-2024
+pubDate: 16 de Fevereiro, 2024
 description: "Por que eu escolhi Astro.js"
 author: "Daniel Kondlatsch"
 image:
@@ -12,30 +12,72 @@ tags: ["astro", "blogging", "learning in public"]
 
 <style>
   main{
+    width: 100%;
+    height: 100%;
+  }
+
+  .markdownContent{
+    width: 100%;
     display: flex;
-    flex-direction: column;
     justify-content: center;
   }
-  main p{
+  .markdownBase{
+    width: 55%;
+  }
+  .postDate{
+    --tw-text-opacity: 1;
+    color: rgb(91, 91, 91);
+    margin-bottom: 2em;
+  }
+  .markdownContent p{
     line-height: 1.8em;
     font-size: 1.2rem;
   }
 
-  main h2{
+  .markdownContent h2{
     font-size:1.8rem
   }
-  
-  img{
+
+  .markdownBase h1{
+    font-size: 3.4em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    word-break: break-word;
+
+  }
+
+  .imgContainer img{
     display: block;
     margin-left: auto;
     margin-right: auto;
     width: 50%;
   }
 
+  .imgContainer{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .imgContainer a{
+    font-size: 1em;
+    margin: 0em;
+    margin-bottom: 1em;
+    text-align: center;
+    text-decoration: none;
+    color: #415a77;
+  }
+
+
 </style>
 
 <PostLayout>
 <main>
+<div class="markdownContent">
+<div class="markdownBase">
+
+# O que me levou a escolher entre Astro e não Next.js
+
+<p class="postDate">16 de Fevereiro, 2024</p>
 
 Quando a idéia de criar esse blog me veio a cabeça, eu sabia que teria uma escolha difícil entre
 qual framework escolher, e eram apenas duas opções, baseado na quantidade de elogios que via
@@ -49,7 +91,7 @@ não concluindo porque meu professor da época instruiu todos alunos a usarem PH
 para ficar mais normalizado todos trabalhos, então fui obrigado a deixar minha Dashboard bem
 feita e polida em Next.js pra trás.(Mas foi a última vez que usei PHP na minha vida).
 
-Durante o processo de criação desse meu projeto, não encontrei problema nenhum, e achei a 
+Durante o processo de criação desse meu projeto, não encontrei problema nenhum, e achei a
 curva de aprendizado do Next.js muito confortável. Mas é ai que entra o grande ponto
 da questão. Se eu utilizei o Next.js gostei e me adaptei rápido, por que eu acabei
 escolhendo Astro, mesmo sendo menos conhecido?
@@ -63,19 +105,19 @@ baseado na minha necessidade.
 O framework que eu deseja tinha que atender a certos pontos:
 
 1. **Suporte SSR**: Como meu principal foco e ponto principal na criação do meu blog é
-performance, sem dúvidas utilizar sites estáticos é a melhor opção neste cenário.
+   performance, sem dúvidas utilizar sites estáticos é a melhor opção neste cenário.
 
 2. **Suporte React**: Sou um desenvolvedor que utiliza React em todos meu projetos,
-então ter suporte a React era o cenário ideal.
+   então ter suporte a React era o cenário ideal.
 
 3. **Documentação**: Como eu não tinha experiência sólida em ambos os frameworks, ter
-uma boa documentação para eu tirar minhas dúvidas caso precise era essencial,
-para evitar dificuldades no meio do caminho.
+   uma boa documentação para eu tirar minhas dúvidas caso precise era essencial,
+   para evitar dificuldades no meio do caminho.
 
 4. **Suporte Markdown**: Até então nunca tinha utilizado arquivos .md na criação de sites,
-mas depois de pensar e analisar casos na internet, vi que para a criação de um webiste como
-um blog, é uma grande utilidade ter a criação de conteúdo através de arquivos .md, ainda mais
-se tratando de um site SSR.
+   mas depois de pensar e analisar casos na internet, vi que para a criação de um webiste como
+   um blog, é uma grande utilidade ter a criação de conteúdo através de arquivos .md, ainda mais
+   se tratando de um site SSR.
 
 Se parar para analisar, tanto Astro como Next atendem muito bem todos estes pontos.
 
@@ -84,7 +126,7 @@ do que eu realmente estava precisando.\
 Simplificando: Preciso de um site que seja rápido, e tenha suporte a arquivos .md, não
 vai ser algo com mímina interatividade, se existir.
 
-Aí que eliminei o Next.js da minha escolha. Pois vi que seria um "overkill" utilizar 
+Aí que eliminei o Next.js da minha escolha. Pois vi que seria um "overkill" utilizar
 ele pra um simples projeto, eu não utilizaria rotas dinâmicas ou SSR no meu projeto, e todas
 outras ferramentas que ele oferece para a criação de um website complexo pra vendas e etc.\
 **Fiquei com Astro**.
@@ -108,19 +150,20 @@ Parece que o Astro se encaixou perfeitamente e supriu todas minhas necessidades,
 nada poderia ser melhor. Mas além disso, outras coisas me deixaram confiante nessa
 escolha, como por exemplo esse gráfico de comparação com outros frameworks:
 
+<div class="imgContainer">
 <img src="../../../public/cwvtest.png" alt="Gráfico: Teste de Performance CWV" style="height: 416px; width:666px;"/>
 <p style="text-align: center; margin:0">Comparação de performance no teste CWV</p>
-<a href="https://astro.build/blog/2023-web-framework-performance-report/"
-style="text-align: center; margin-top: 0; margin-bottom: 1em; font-size: 0.8rem; text-decoration: none; color: #415a77;">
+<a href="https://astro.build/blog/2023-web-framework-performance-report/">
 Astro Blog 2023 Web Framework Performance Report
 </a>
 
+<div class="imgContainer">
 <img src="../../../public/lighthousespeed.png" alt="Gráfico: Teste de Performance Lighthouse" style="height: 416px; width:666px;"/>
 <p style="text-align: center; margin:0">Comparação de performance no teste Lighthouse</p>
-<a href="https://astro.build/blog/2023-web-framework-performance-report/"
-style="text-align: center; margin-top: 0; margin-bottom: 1em; font-size: 0.8rem; text-decoration: none; color: #415a77;">
+<a href="https://astro.build/blog/2023-web-framework-performance-report/">
 Astro Blog 2023 Web Framework Performance Report
 </a>
+</div>
 
 Como da pra ver, são ótimos resultados e que se sobrepõem muito bem com seus
 concorrentes.
@@ -147,5 +190,8 @@ E claro, esse site é feito completamente em Astro.js, você pode tirar suas pr�
 conclusões.
 
 👋
+
+</div>
+</div>
 </main>
 </PostLayout>
