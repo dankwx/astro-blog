@@ -1,58 +1,82 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import "../styles/global.css";
+import Navigation from "../components/Navigation.astro";
+import Footer from "../components/Footer.astro";
 ---
 
 <Layout title="Daniel Kondlatsch - dankwx">
   <main>
-    <p class="teaser">🖖 eu faço sites.</p>
-    <h1 class="name">Daniel Kondlatsch</h1>
-    <p class="description">
-      Sou um desenvolvedor <span class="descriptionSpam">front-end</span> que gosta
-      de construir site pra
-      <span class="descriptionSpam">tudo</span> que eu consigo imaginar
-    </p>
-  </main>
-  <div class="hrWrapper"></div>
-  <div class="postsWrapper">
-    <h1 class="postSectionTitle">Posts</h1>
-    <div class="cardsWrapper">
-      <a class="card">
-        <article>
-          <div class="postName">
-            <h3>
-              Section 1.10.33 of "de Finibus Bonorum et Malorum", written by
-              Cicero in 45 BC
-            </h3>
-            <span>technology</span>
-          </div>
-          <div class="postDate">
-            <span>dd/mm/yyyy</span>
-          </div>
-        </article>
-      </a>
+    <Navigation />
+    <div class="apresentationSection">
+      <div class="apresentationContent">
+        <p class="teaser">🖖 eu faço sites.</p>
+        <h1 class="name">Daniel Kondlatsch</h1>
+        <p class="description">
+          Sou um desenvolvedor <span class="descriptionSpam">front-end</span> que
+          gosta de construir site pra
+          <span class="descriptionSpam">tudo</span> que eu consigo imaginar
+        </p>
+      </div>
     </div>
-  </div>
-  <div class="personalSection">
-    <div class="content">
-      <h2>Um pouco sobre mim</h2>
-      <p>
-        Crio sites desde criança, quando o blogspot era um ótimo jeito de criar
-        blogs, eu mexia no codigo fonte e colocava o que na época era chamado de
-        widgets de javascript, criava sites para meu familiares e várias das
-        muitas coisas que eu gostava, principalmente relacionado a jogos.<br
-        /><br />
+    <div class="postsWrapper">
+      <div class="postsContent">
+        <h1 class="postSectionTitle">Posts</h1>
+        <div class="cardsWrapper">
+          <a class="card">
+            <article>
+              <div class="postName">
+                <h3>
+                  Section 1.10.33 of "de Finibus Bonorum et Malorum", written by
+                  Cicero in 45 BC
+                </h3>
+                <span>technology</span>
+              </div>
+              <div class="postDate">
+                <span>dd/mm/yyyy</span>
+              </div>
+            </article>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="personalSection">
+      <div class="content">
+        <h2>Um pouco sobre mim</h2>
+        <p>
+          Crio sites desde criança, quando o blogspot era um ótimo jeito de
+          criar blogs, eu mexia no codigo fonte e colocava o que na época era
+          chamado de widgets de javascript, criava sites para meu familiares e
+          várias das muitas coisas que eu gostava, principalmente relacionado a
+          jogos.<br /><br />
 
-        Agora sou um desenvolvedor front-end focado em tudo relacionado a
-        criação de sites, frameworks, metodologias, não canso de aprender novas
-        coisas da minha área que tanto amo e assim será para sempre.<br /><br />
-        Programação é uma paixão.
-      </p>
+          Agora sou um desenvolvedor front-end focado em tudo relacionado a
+          criação de sites, frameworks, metodologias, não canso de aprender
+          novas coisas da minha área que tanto amo e assim será para sempre.<br
+          /><br />
+          Programação é uma paixão.
+        </p>
+      </div>
     </div>
-  </div>
+    <Footer />
+  </main>
 </Layout>
 
 <style>
+  main {
+    width: 100%;
+    height: 100%;
+  }
+  .apresentationSection {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    border-bottom: solid 1px;
+    padding-bottom: 2em;
+  }
+  .apresentationContent {
+    width: 55%;
+  }
   .teaser {
     padding-top: 2.6em;
     font-size: 1.4em;
@@ -60,32 +84,34 @@ import "../styles/global.css";
   .name {
     font-size: 4.4em;
     font-weight: bold;
-    padding-top: 0.4em;
+    padding-top: 0.9em;
+    padding-bottom: 0.7em;
     font-family: "Aleo", serif;
     text-shadow:
-      7.25px 0.25px 0 #ffd6ba,
-      0.5px 0.5px 0 #ffd6ba,
-      0.75px 0.75px 0 #ffd6ba,
-      1px 1px 0 #ffd6ba,
-      1.25px 1.25px 0 #ffd6ba,
-      1.5px 1.5px 0 #ffd6ba,
-      1.75px 1.75px 0 #ffd6ba,
-      2px 2px 0 #ffd6ba,
-      2.25px 2.25px 0 #ffd6ba,
-      2.5px 2.5px 0 #ffd6ba,
-      2.75px 2.75px 0 #ffd6ba,
-      3px 3px 0 #ffd6ba,
-      3.25px 3.25px 0 #ffd6ba,
-      3.5px 3.5px 0 #ffd6ba,
-      3.75px 3.75px 0 #ffd6ba,
-      4px 4px 0 #ffd6ba,
-      5.25px 5.25px 0 #ffd6ba,
-      5.5px 5.5px 0 #ffd6ba,
-      5.75px 5.75px 0 #ffd6ba,
-      6px 6px 0 #ffd6ba;
+      7.25px 0.25px 0 #83c5be,
+      0.5px 0.5px 0 #83c5be,
+      0.75px 0.75px 0 #83c5be,
+      1px 1px 0 #83c5be,
+      1.25px 1.25px 0 #83c5be,
+      1.5px 1.5px 0 #83c5be,
+      1.75px 1.75px 0 #83c5be,
+      2px 2px 0 #83c5be,
+      2.25px 2.25px 0 #83c5be,
+      2.5px 2.5px 0 #83c5be,
+      2.75px 2.75px 0 #83c5be,
+      3px 3px 0 #83c5be,
+      3.25px 3.25px 0 #83c5be,
+      3.5px 3.5px 0 #83c5be,
+      3.75px 3.75px 0 #83c5be,
+      4px 4px 0 #83c5be,
+      5.25px 5.25px 0 #83c5be,
+      5.5px 5.5px 0 #83c5be,
+      5.75px 5.75px 0 #83c5be,
+      6px 6px 0 #83c5be;
   }
   .description {
     font-size: 2.4em;
+    line-height: 1.6em;
   }
   .descriptionSpam {
     font-style: italic;
@@ -95,20 +121,21 @@ import "../styles/global.css";
   .descriptionSpam:last-child {
     color: #e9c46a;
   }
-  .hrWrapper {
-    width: 100%;
-    height: 0.2vh;
-    background-color: black;
-  }
   .postSectionTitle {
     font-size: 3.4em;
     margin-top: 1em;
     margin-bottom: 1em;
+    font-weight: bold;
   }
   .postsWrapper {
-    margin: auto;
-    max-width: 90ch;
-    margin-bottom: 14rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: #f4e5e5;
+    padding-bottom: 10em;
+  }
+  .postsContent{
+    width: 55%;
   }
   .cardsWrapper {
     box-sizing: border-box;
@@ -123,12 +150,12 @@ import "../styles/global.css";
     padding: 2em 0;
     cursor: pointer;
     box-shadow:
-      1px 1px 0 0 #ffd6ba,
-      2px 2px 0 0 #ffd6ba,
-      3px 3px 0 0 #ffd6ba,
-      4px 4px 0 0 #ffd6ba,
-      5px 5px 0 0 #ffd6ba,
-      6px 6px 0 0 #ffd6ba;
+      1px 1px 0 0 #555B6E,
+      2px 2px 0 0 #555B6E,
+      3px 3px 0 0 #555B6E,
+      4px 4px 0 0 #555B6E,
+      5px 5px 0 0 #555B6E,
+      6px 6px 0 0 #555B6E;
 
     transition: box-shadow 0.3s ease;
   }
@@ -153,6 +180,8 @@ import "../styles/global.css";
   h3 {
     margin: 0;
     font-size: 2em;
+    font-weight: bold;
+    line-height: 1.3em;
   }
   .postDate {
     height: 100%;
@@ -177,10 +206,12 @@ import "../styles/global.css";
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 2em 0;
   }
   .content h2 {
     font-family: "Aleo", sans-serif;
-
+    font-weight: bold;
+    margin-bottom: 1.4em;
     font-size: 3.3em;
   }
 
@@ -188,5 +219,6 @@ import "../styles/global.css";
     font: inherit;
     font-size: 1.6em;
     font-family: "Poppins", sans-serif;
+    line-height: 1.6em;
   }
 </style>
