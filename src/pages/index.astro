@@ -23,7 +23,11 @@ const blogPost = await Astro.glob("./posts/*.md");
         <div class="cardsWrapper">
           {
             blogPost.map((poster) => (
-              <a class="card">
+              <a
+                href={poster.url}
+                style="text-decoration:none;color: black;"
+                class="card"
+              >
                 <article>
                   <div class="postName">
                     <h3>{poster.frontmatter.title}</h3>
