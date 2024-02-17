@@ -1,6 +1,7 @@
 ---
 import Layout from "../layouts/PageLayout.astro";
 import "../styles/global.css";
+const blogPost = await Astro.glob("./posts/*.md");
 ---
 
 <Layout title="Daniel Kondlatsch - dankwx">
@@ -20,20 +21,29 @@ import "../styles/global.css";
       <div class="postsContent">
         <h1 class="postSectionTitle">Posts</h1>
         <div class="cardsWrapper">
-          <a class="card">
-            <article>
-              <div class="postName">
-                <h3>
-                  Section 1.10.33 of "de Finibus Bonorum et Malorum", written by
-                  Cicero in 45 BC
-                </h3>
-                <span>technology</span>
-              </div>
-              <div class="postDate">
-                <span>dd/mm/yyyy</span>
-              </div>
-            </article>
-          </a>
+          {
+            blogPost.map((poster) => (
+              <a class="card">
+                <article>
+                  <div class="postName">
+                    <h3>{poster.frontmatter.title}</h3>
+                    {poster.frontmatter.category && (
+                      <span>{poster.frontmatter.category.join(", ")}</span>
+                    )}
+                  </div>
+                  <div class="postDate">
+                    {poster.frontmatter.pubDate && (
+                      <span>
+                        {new Date(
+                          poster.frontmatter.pubDate
+                        ).toLocaleDateString("en-GB")}
+                      </span>
+                    )}
+                  </div>
+                </article>
+              </a>
+            ))
+          }
         </div>
       </div>
     </div>
