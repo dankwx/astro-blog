@@ -83,7 +83,7 @@ time,
 mark,
 audio,
 video {
-  scrollbar-gutter: stable both-edges;
+  scrollbar-gutter: stable;
 }
 
 * {
