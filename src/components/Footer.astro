@@ -4,7 +4,8 @@
 
 <div class="footerWrapper">
   <div class="info">
-    <p>© 2024 Feito com amor e ☕ em Santa Catarina, Brasil.</p>
+    <p>© 2024</p>
+    <p>Feito com amor e ☕ em Santa Catarina, Brasil.</p>
   </div>
   <div class="socials">
     <a href="https://www.linkedin.com/in/daniel-kondlatsch/" target="_blank">
@@ -48,6 +49,10 @@
     justify-content: space-around;
     font-size: 1.1em;
   }
+  .info{
+    display: flex;
+    gap: 1em
+  }
   .socials {
     display: flex;
     gap: 1em;
@@ -56,4 +61,20 @@
     text-decoration: none;
     color: black;
   }
+  @media (max-width: 600px) {
+    .footerWrapper{
+      flex-direction: column;
+      padding: 0em 1em;
+    }
+  .info{
+    flex-direction: column;
+  }
+  .info p:first-child{
+    padding-top:5em;
+  }
+  .socials{
+    padding-top:2em;
+    padding-bottom:2em;
+  }
+}
 </style>
