@@ -1,66 +1,125 @@
 ---
 import Layout from "../layouts/PageLayout.astro";
 import "../styles/global.css";
-
-const pageTitle = "pomiusu";
-
-const identity = {
-  firstName: "Daniel Kondlatsch",
-  country: "Brazil",
-  occupation: "Front-end Developer",
-  hobbies: ["programming", "gaming", "listening to music"],
-};
-
-const skills = ["HTML", "CSS", "JavaScript", "React", "Astro", "Writing Docs"];
-
-const happy = true;
-const finished = false;
-const goal = 3;
-
-const skillColor = "red";
-const fontWeight = "bold";
-const textCase = "uppercase";
 ---
 
 <Layout title="Sobre mim">
   <main>
-    <h1>Sobre mim<span class="text-gradient">{pageTitle}</span></h1>
-    <p>Here are a few facts about me:</p>
-    <ul>
-      <li>My name is {identity.firstName}.</li>
-      <li>
-        I live in {identity.country} and I work as a {identity.occupation}.
-      </li>
-      {
-        identity.hobbies.length >= 2 && (
-          <li>
-            Two of my hobbies are: {identity.hobbies[0]} and{" "}
-            {identity.hobbies[1]}
-          </li>
-        )
-      }
-    </ul>
-    <p>My skills are:</p>
-    <ul>
-      {skills.map((skill) => <li class="skill">{skill}</li>)}
-    </ul>
-
-    {happy && <p>I am happy to be learning Astro!</p>}
-
-    {finished && <p>I finished this tutorial!</p>}
-
-    {
-      goal === 3 ? (
-        <p>My goal is to finish in 3 days.</p>
-      ) : (
-        <p>My goal is not 3 days.</p>
-      )
-    }
+    <div class="aboutWrapper">
+      <div class="aboutContainer">
+        <div class="aboutContent">
+          <div class="personalSection">
+          <h2>Sobre mim 👩🏻‍💻</h2>
+          <p>🖖🏻 Olá, meu nome é Daniel Kondlatsch, dankwx se preferir. 
+          Eu sou um desenvolvedor front-end que também tenta fazer coisas full-stack</p>
+          <p>Se você deseja entrar em contato, por favor 
+          me envie um email: <strong>
+            <a href="mailto:danielpettres@gmail.com">danielpettres@gmail.com</a>
+            </strong>.</p>
+        </div>
+        </div>
+      </div>
+      <div class="stackContainer">
+        <div class="stackContent">
+          <p>I'm passionate about web development. 
+          Now I'm learning about accessibility, dataviz, and building ethical technology.</p>
+          <h2>Skill Stack</h2>
+          <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>TypeScript</li>
+            <li>React</li>
+            <li>Astro</li>
+            <li>Prisma</li>
+          </ul>
+          <h2>Como me tornei um desenvolvedor</h2>
+          <p>I'm passionate about web development. 
+          Now I'm learning about accessibility, dataviz, and building ethical technology.</p>
+        </div>
+      </div>
+    </div>
+   
   </main>
 </Layout>
 
-<style define:vars={{ skillColor, fontWeight, textCase }}>
-  h1 {
-    color: blue;
+<style>
+  main{
+    width: 100%;
+    height:100%;
   }
+  .aboutWrapper{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .aboutContainer{
+    width: 100%;
+    /*background-color: pink;*/
+    padding-top: 11em;
+    display: flex;
+    justify-content: center;
+  }
+  .aboutContent{
+    width: 48%;
+    
+  }
+  
+  .personalSection{
+    padding-bottom: 4rem;
+  }
+  .personalSection h2{
+    font-size: 3em;
+    font-family: "Aleo", serif;
+    font-weight: 700;
+  }
+  .personalSection p{
+    font-size: 1.5rem;
+    font-family: "Poppins", sans-serif;
+    padding-top: 1.2em;
+  }
+  .personalSection p:last-child{
+    font-size:1rem;
+  }
+  .personalSection strong a{
+    text-decoration: underline;
+    color: black;
+  }
+  .stackContainer{
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f0ead2;
+  }
+  .stackContent{
+    width: 38%;
+    padding: 4rem 0;
+  }
+  .stackContent p{
+    font-size: 1.125rem;
+    font-family: "Poppins", sans-serif;
+  }
+  .stackContent h2{
+    font-size: 3em;
+    font-family: "Aleo", serif;
+    font-weight: 700;
+    padding-top: 2em;
+    padding-bottom: 0.6em;
+  }
+  .stackContent ul{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+  }
+  .stackContent ul li{
+    padding: 14px 16px;
+    background-color: #fff;
+    border: 1px solid hsl(280 46% 14%/0.7);
+    border-radius: 3px;
+    font-family: "Poppins", sans-serif;
+    font-size: 1.125rem;
+  }
+  
 </style>
