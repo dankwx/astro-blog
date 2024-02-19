@@ -19,10 +19,39 @@
       <p>dankwx</p>
     </div>
     <div class="mobileMenu">
-      <svg xmlns="http://www.w3.org/2000/svg" width="2.6em" height="2.6em" viewBox="0 0 16 16"><path fill="currentColor" fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/></svg>
+      <svg id="menuIcon" xmlns="http://www.w3.org/2000/svg" width="2.6em" height="2.6em" viewBox="0 0 16 16">
+  <path fill="currentColor" fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
+</svg>
+      <div class="overlay">
+        <div class="overlay-content">
+          <div class="leftSection">
+            <a href="/">Home</a>
+            <a href="/about/">About</a>
+            <a href="/blog/">Blog</a>
+          </div>
+          <div class="rightSection">
+            <svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" viewBox="0 0 24 24"><path fill="currentColor" d="m8.382 17.025l-1.407-1.4L10.593 12L6.975 8.4L8.382 7L12 10.615L15.593 7L17 8.4L13.382 12L17 15.625l-1.407 1.4L12 13.41z"/></svg>
+          </div>
+          
+        </div>
+      </div>
     </div>
   </div>
 </div>
+
+<script>
+  const overlay = document.querySelector('.overlay');
+  const menuIcon = document.getElementById('menuIcon');
+  const closeIcon = document.querySelector('.rightSection svg');
+
+  menuIcon.addEventListener('click', function() {
+    overlay.classList.toggle('active');
+  });
+
+  closeIcon.addEventListener('click', function() {
+    overlay.classList.remove('active');
+  });
+</script>
 
 <style>
   .headerWrapper {
@@ -101,10 +130,46 @@
     justify-content: end;
     padding-right:1em;
   }
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  transition: transform 0.3s ease-in-out;
+  transform: translateX(100%);
+  background-color: #faf9f9;
+  display:flex;
+  justify-content:center;
+  padding:1em;
+}
 
-  .mobileMenu{
-    display:flex;
-
-  }
+.overlay.active {
+  transform: translateX(0);
+}
+.overlay-content{
+  width: 80%;
+  height: 100%;
+  display:flex;
+  flex-direction: row;
+}
+.overlay-content .leftSection{
+  display: flex;
+  width:60%;
+  flex-direction: column;
+  padding-top:2em;
+  padding-left: 1em;
+}
+.overlay-content .leftSection a{
+  font-family: "Poppins", sans-serif;
+  font-size: 2em;
+  margin-bottom: 1em;
+}
+.overlay-content .rightSection{
+  width: 40%;
+  padding-top: 2em;
+  display:flex;
+  justify-content: center;
 }
 </style>
