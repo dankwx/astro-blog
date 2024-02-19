@@ -13,6 +13,9 @@
     <a href="/about/">About</a>
     <a href="/blog/">Blog</a>
   </div>
+  <div class="mobileContainer">
+    <h2>celular</h2>
+  </div>
 </div>
 
 <style>
@@ -24,7 +27,9 @@
     box-sizing: border-box;
     display: flex;
     justify-content: space-around;
-
+  }
+  .mobileContainer{
+    display: none;
   }
   .leftContainer {
     font-weight: bold;
@@ -51,4 +56,14 @@
     color: black;
     font-size: 1.4em;
   }
+
+  @media (max-width: 768px) {
+    .leftContainer, .rightContainer{
+      display: none;
+    }
+  .mobileContainer{
+    display: flex;
+    color: red;
+  }
+}
 </style>
