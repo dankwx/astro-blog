@@ -21,8 +21,8 @@ import "../styles/global.css";
       </div>
       <div class="stackContainer">
         <div class="stackContent">
-          <p>I'm passionate about web development. 
-          Now I'm learning about accessibility, dataviz, and building ethical technology.</p>
+          <p>Sou apaixonado por desenvolvimento web. Agora estou aprendendo sobre
+          acessibilidade, visualização de dados e construção de tecnologia ética.</p>
           <h2>Skill Stack</h2>
           <ul>
             <li>HTML</li>
@@ -34,8 +34,46 @@ import "../styles/global.css";
             <li>Prisma</li>
           </ul>
           <h2>Como me tornei um desenvolvedor</h2>
-          <p>I'm passionate about web development. 
-          Now I'm learning about accessibility, dataviz, and building ethical technology.</p>
+          <p class="descriptionParagraph">A primeira vez que encontrei “desenvolvimento web” foi há cerca de 15 anos, 
+          quando mudei a cor de fundo do meu blog com CSS, isso me surpreendeu muito! 
+          Achei muito legal, a internet é o futuro! 
+          Naquela época, acabei de me formar na faculdade e, apesar de ter estudado finanças, 
+          decidi mudar minha carreira para desenvolvimento web. 
+          Então comecei a aprender programação sozinho, lendo livros, artigos 
+          e discussões online.</p>
+          <p class="descriptionParagraph">Eu consegui meu primeiro trabalho como
+          desenvolvedor front-end em 2022, após participar de um estágio em React, com duração de
+          5 meses, ofertado pela <a 
+          href="https://compass.uol/pt/home/" target="_blank"
+          >Compass.uol
+          <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg></span></a>.
+          Foi aí que tive meu primeiro contato com demandas, tempos limitados, 
+          metodologia ágil, pressão e trabalho em equipe.</br> No final do projeto, eu e mais
+          alguns poucos candidatos que estavam fazendo o estágio comigo foram escolhidos
+          para ocupar uma vaga de desenvolvedor front-end, só que agora, de verdade, em
+          projetos de verdade.
+          </p>
+          <p class="descriptionParagraph">
+            Nesse meu emprego, trabalhei como desenvolvedor React e fiz parte de dois times
+            de desenvolvimento, da <a href="https://www.sistemapoliedro.com.br/"
+            target="_blank">Poliedro
+            <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg></span></a>
+            </a>, onde criei funções simples em React, principalmente no sistema de leitor
+            de livros PDF's da empresa, e também fiz pequenas correções em componentes
+            já existentes. Depois de terminar meu período, integrei o time da
+            <a href="https://www.sicredi.com.br/home/"
+            target="_blank">Sicredi
+            <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg></span></a>
+            , onde auxiliei na migração do sistema de banco feito em Angular, para React.</br>
+            Em ambos projetos utilizei 100% do tempo metodologia ágil Scrum, visualização 
+            Kanbam, com o sistema da Microsoft Azure DevOps e também GitLab, ambos com
+            versionamento e pipelines. Durante meu tempo na Compass.uol, também obtive
+            várias certificações tecnóligas ofertadas pela empresa.
+            </a>
+          </p>
+          <p>Eu amo desenvolvimento web e atualmente passo meu tempo livre criando projetos em React e
+          estudando as novas stacks do mercado, aprender e programar é meu hobby
+          desde que toquei no meu primeiro código, e sigo criando e aprendendo todo dia.</p>
         </div>
       </div>
     </div>
@@ -78,6 +116,7 @@ import "../styles/global.css";
     font-size: 1.5rem;
     font-family: "Poppins", sans-serif;
     padding-top: 1.2em;
+    line-height:1.4em;
   }
   .personalSection p:last-child{
     font-size:1rem;
@@ -91,7 +130,7 @@ import "../styles/global.css";
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #f0ead2;
+    background-color: #edf2f4;
   }
   .stackContent{
     width: 38%;
@@ -100,6 +139,7 @@ import "../styles/global.css";
   .stackContent p{
     font-size: 1.125rem;
     font-family: "Poppins", sans-serif;
+    line-height:1.8em;
   }
   .stackContent h2{
     font-size: 3em;
@@ -120,6 +160,12 @@ import "../styles/global.css";
     border-radius: 3px;
     font-family: "Poppins", sans-serif;
     font-size: 1.125rem;
+  }
+  .descriptionParagraph{
+    margin-bottom: 1.8em;
+  }
+  .descriptionParagraph a{
+    color: #0081a7;
   }
   
 </style>
