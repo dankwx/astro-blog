@@ -25,9 +25,9 @@ category: ["astro", "blogging", "learning in public"]
     margin-top: 1em;
     margin-bottom: 1em;
   }
-  .markdownBase{
-    width: 55%;
-  }
+  /*.markdownBase{*/
+  /*  width: 85%;*/
+  /*}*/
   .postDate{
     --tw-text-opacity: 1;
     color: rgb(91, 91, 91);
@@ -42,13 +42,7 @@ category: ["astro", "blogging", "learning in public"]
     font-size:1.8rem
   }
 
-  .markdownBase h1{
-    font-size: 3.4em;
-    margin-top: 1em;
-    margin-bottom: 1em;
-    word-break: break-word;
 
-  }
 
   .markdownBase img{
     display: block;
