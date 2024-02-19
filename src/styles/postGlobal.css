@@ -94,3 +94,26 @@ video {
 body {
   background-color: #faf9f9;
 }
+
+.markdownBase{
+    width: 55%;
+  }
+.markdownBase h1{
+  font-size: 3.4em;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  word-break: break-word;
+}
+
+@media (max-width: 768px) {
+  .markdownBase{
+    width: 85%;
+  }
+  
+.markdownBase h1{
+  font-size: 2.4em;
+  margin-top: 1em;
+  margin-bottom: 0;
+  word-break: break-word;
+  }
+}

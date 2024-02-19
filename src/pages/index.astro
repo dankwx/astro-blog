@@ -231,4 +231,30 @@ const blogPost = await Astro.glob("./posts/*.md");
     font-family: "Poppins", sans-serif;
     line-height: 1.6em;
   }
+  
+  @media (max-width: 768px) {
+  .apresentationContent{
+    width: 85%;
+  }
+  .postsContent{
+    width:90%;
+  }
+  .content{
+    width: 90%;
+  }
+  .name{
+    font-size:3.2rem;
+  }
+  .postName{
+    margin-bottom: 1em;
+  }
+  .postDate span{
+    word-break: break-word;
+  }
+  article{
+    flex-direction: column;
+    word-break: none;
+    align-items:start;
+  }
+}
 </style>
