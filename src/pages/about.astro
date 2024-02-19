@@ -1,66 +1,171 @@
 ---
 import Layout from "../layouts/PageLayout.astro";
 import "../styles/global.css";
-
-const pageTitle = "pomiusu";
-
-const identity = {
-  firstName: "Daniel Kondlatsch",
-  country: "Brazil",
-  occupation: "Front-end Developer",
-  hobbies: ["programming", "gaming", "listening to music"],
-};
-
-const skills = ["HTML", "CSS", "JavaScript", "React", "Astro", "Writing Docs"];
-
-const happy = true;
-const finished = false;
-const goal = 3;
-
-const skillColor = "red";
-const fontWeight = "bold";
-const textCase = "uppercase";
 ---
 
 <Layout title="Sobre mim">
   <main>
-    <h1>Sobre mim<span class="text-gradient">{pageTitle}</span></h1>
-    <p>Here are a few facts about me:</p>
-    <ul>
-      <li>My name is {identity.firstName}.</li>
-      <li>
-        I live in {identity.country} and I work as a {identity.occupation}.
-      </li>
-      {
-        identity.hobbies.length >= 2 && (
-          <li>
-            Two of my hobbies are: {identity.hobbies[0]} and{" "}
-            {identity.hobbies[1]}
-          </li>
-        )
-      }
-    </ul>
-    <p>My skills are:</p>
-    <ul>
-      {skills.map((skill) => <li class="skill">{skill}</li>)}
-    </ul>
-
-    {happy && <p>I am happy to be learning Astro!</p>}
-
-    {finished && <p>I finished this tutorial!</p>}
-
-    {
-      goal === 3 ? (
-        <p>My goal is to finish in 3 days.</p>
-      ) : (
-        <p>My goal is not 3 days.</p>
-      )
-    }
+    <div class="aboutWrapper">
+      <div class="aboutContainer">
+        <div class="aboutContent">
+          <div class="personalSection">
+          <h2>Sobre mim 👩🏻‍💻</h2>
+          <p>🖖🏻 Olá, meu nome é Daniel Kondlatsch, dankwx se preferir. 
+          Eu sou um desenvolvedor front-end que também tenta fazer coisas full-stack</p>
+          <p>Se você deseja entrar em contato, por favor 
+          me envie um email: <strong>
+            <a href="mailto:danielpettres@gmail.com">danielpettres@gmail.com</a>
+            </strong>.</p>
+        </div>
+        </div>
+      </div>
+      <div class="stackContainer">
+        <div class="stackContent">
+          <p>Sou apaixonado por desenvolvimento web. Agora estou aprendendo sobre
+          acessibilidade, visualização de dados e construção de tecnologia ética.</p>
+          <h2>Skill Stack</h2>
+          <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>TypeScript</li>
+            <li>React</li>
+            <li>Astro</li>
+            <li>Prisma</li>
+          </ul>
+          <h2>Como me tornei um desenvolvedor</h2>
+          <p class="descriptionParagraph">A primeira vez que encontrei “desenvolvimento web” foi há cerca de 15 anos, 
+          quando mudei a cor de fundo do meu blog com CSS, isso me surpreendeu muito! 
+          Achei muito legal, a internet é o futuro! 
+          Naquela época, acabei de me formar na faculdade e, apesar de ter estudado finanças, 
+          decidi mudar minha carreira para desenvolvimento web. 
+          Então comecei a aprender programação sozinho, lendo livros, artigos 
+          e discussões online.</p>
+          <p class="descriptionParagraph">Eu consegui meu primeiro trabalho como
+          desenvolvedor front-end em 2022, após participar de um estágio em React, com duração de
+          5 meses, ofertado pela <a 
+          href="https://compass.uol/pt/home/" target="_blank"
+          >Compass.uol
+          <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg></span></a>.
+          Foi aí que tive meu primeiro contato com demandas, tempos limitados, 
+          metodologia ágil, pressão e trabalho em equipe.</br> No final do projeto, eu e mais
+          alguns poucos candidatos que estavam fazendo o estágio comigo foram escolhidos
+          para ocupar uma vaga de desenvolvedor front-end, só que agora, de verdade, em
+          projetos de verdade.
+          </p>
+          <p class="descriptionParagraph">
+            Nesse meu emprego, trabalhei como desenvolvedor React e fiz parte de dois times
+            de desenvolvimento, da <a href="https://www.sistemapoliedro.com.br/"
+            target="_blank">Poliedro
+            <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg></span></a>
+            </a>, onde criei funções simples em React, principalmente no sistema de leitor
+            de livros PDF's da empresa, e também fiz pequenas correções em componentes
+            já existentes. Depois de terminar meu período, integrei o time da
+            <a href="https://www.sicredi.com.br/home/"
+            target="_blank">Sicredi
+            <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg></span></a>
+            , onde auxiliei na migração do sistema de banco feito em Angular, para React.</br>
+            Em ambos projetos utilizei 100% do tempo metodologia ágil Scrum, visualização 
+            Kanbam, com o sistema da Microsoft Azure DevOps e também GitLab, ambos com
+            versionamento e pipelines. Durante meu tempo na Compass.uol, também obtive
+            várias certificações tecnóligas ofertadas pela empresa.
+            </a>
+          </p>
+          <p>Eu amo desenvolvimento web e atualmente passo meu tempo livre criando projetos em React e
+          estudando as novas stacks do mercado, aprender e programar é meu hobby
+          desde que toquei no meu primeiro código, e sigo criando e aprendendo todo dia.</p>
+        </div>
+      </div>
+    </div>
+   
   </main>
 </Layout>
 
-<style define:vars={{ skillColor, fontWeight, textCase }}>
-  h1 {
-    color: blue;
+<style>
+  main{
+    width: 100%;
+    height:100%;
   }
+  .aboutWrapper{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .aboutContainer{
+    width: 100%;
+    /*background-color: pink;*/
+    padding-top: 11em;
+    display: flex;
+    justify-content: center;
+  }
+  .aboutContent{
+    width: 48%;
+    
+  }
+  
+  .personalSection{
+    padding-bottom: 4rem;
+  }
+  .personalSection h2{
+    font-size: 3em;
+    font-family: "Aleo", serif;
+    font-weight: 700;
+  }
+  .personalSection p{
+    font-size: 1.5rem;
+    font-family: "Poppins", sans-serif;
+    padding-top: 1.2em;
+    line-height:1.4em;
+  }
+  .personalSection p:last-child{
+    font-size:1rem;
+  }
+  .personalSection strong a{
+    text-decoration: underline;
+    color: black;
+  }
+  .stackContainer{
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #edf2f4;
+  }
+  .stackContent{
+    width: 38%;
+    padding: 4rem 0;
+  }
+  .stackContent p{
+    font-size: 1.125rem;
+    font-family: "Poppins", sans-serif;
+    line-height:1.8em;
+  }
+  .stackContent h2{
+    font-size: 3em;
+    font-family: "Aleo", serif;
+    font-weight: 700;
+    padding-top: 2em;
+    padding-bottom: 0.6em;
+  }
+  .stackContent ul{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+  }
+  .stackContent ul li{
+    padding: 14px 16px;
+    background-color: #fff;
+    border: 1px solid hsl(280 46% 14%/0.7);
+    border-radius: 3px;
+    font-family: "Poppins", sans-serif;
+    font-size: 1.125rem;
+  }
+  .descriptionParagraph{
+    margin-bottom: 1.8em;
+  }
+  .descriptionParagraph a{
+    color: #0081a7;
+  }
+  
 </style>
