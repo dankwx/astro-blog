@@ -15,10 +15,11 @@
   </div>
   <div class="mobileContainer">
     <div class="mobileTitle">
+      <img src="https://img.icons8.com/?size=64&id=geMFbLqfiOHh&format=png" />
       <p>dankwx</p>
     </div>
     <div class="mobileMenu">
-      <p>menu</p>
+      <svg xmlns="http://www.w3.org/2000/svg" width="2.6em" height="2.6em" viewBox="0 0 16 16"><path fill="currentColor" fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/></svg>
     </div>
   </div>
 </div>
@@ -64,7 +65,7 @@
 
   @media (max-width: 768px) {
     .headerWrapper{
-      background-color: pink;
+     
     }
     .leftContainer, .rightContainer{
       display: none;
@@ -75,15 +76,35 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    color: red;
   }
   .mobileTitle{
     display:flex;
-    background-color:blue;
+    align-items: center;
+    min-width: 40%;
+    height: 100%;
+    padding-left:1em;
+
+  }
+  .mobileTitle p{
+    font-family: Lato,sans-serif;
+    font-weight: bold;
+    font-size:1.8em;
+  }
+  .mobileTitle img{
+    width: 35px;
   }
   .mobileMenu{
+    min-width: 60%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    padding-right:1em;
+  }
+
+  .mobileMenu{
     display:flex;
-    background-color:red;
+
   }
 }
 </style>
