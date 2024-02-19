@@ -40,17 +40,26 @@
 </div>
 
 <script>
-  const overlay = document.querySelector('.overlay');
   const menuIcon = document.getElementById('menuIcon');
+
+  if (menuIcon) {
+    menuIcon.addEventListener('click', function() {
+      const overlay = document.querySelector('.overlay');
+      if (overlay) {
+        overlay.classList.toggle('active');
+      }
+    });
+  }
+
   const closeIcon = document.querySelector('.rightSection svg');
-
-  menuIcon.addEventListener('click', function() {
-    overlay.classList.toggle('active');
-  });
-
-  closeIcon.addEventListener('click', function() {
-    overlay.classList.remove('active');
-  });
+  if (closeIcon) {
+    closeIcon.addEventListener('click', function() {
+      const overlay = document.querySelector('.overlay');
+      if (overlay) {
+        overlay.classList.remove('active');
+      }
+    });
+  }
 </script>
 
 <style>
