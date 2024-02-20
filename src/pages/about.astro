@@ -147,6 +147,7 @@ import "../styles/global.css";
     font-weight: 700;
     padding-top: 2em;
     padding-bottom: 0.6em;
+    word-break: break-word;
   }
   .stackContent ul{
     display: flex;
@@ -167,5 +168,15 @@ import "../styles/global.css";
   .descriptionParagraph a{
     color: #0081a7;
   }
-  
+  @media (max-width: 768px) {
+    .aboutContent{
+    width: 85%; 
+  }
+  .stackContent{
+    width: 85%;
+  }
+  .stackContainer h2{
+      font-size: 2.4em;
+    }
+}
 </style>
