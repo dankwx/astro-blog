@@ -1,6 +1,6 @@
 ---
 layout: "../../layouts/PostLayout.astro"
-title: My Second Blog Post
+title: nao tem segundo
 author: Astro Learner
 description: "After learning some Astro, I couldn't stop!"
 image:
@@ -20,4 +20,4 @@ tags: ["astro", "blogging", "learning in public", "successes"]
   }
 </style>
 
-After a successful first week learning Astro, I decided to try some more. I wrote and imported a small component from memory!
+nada ainda. teste apenas
