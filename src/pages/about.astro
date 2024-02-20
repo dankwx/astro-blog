@@ -130,8 +130,7 @@ import "../styles/global.css";
     display: flex;
     flex-direction: column;
     align-items: center;
-    /*background-color: #edf2f4;*/
-    background-color: red;
+    background-color: #edf2f4;
   }
   .stackContent{
     width: 38%;
@@ -169,5 +168,15 @@ import "../styles/global.css";
   .descriptionParagraph a{
     color: #0081a7;
   }
-  
+  @media (max-width: 768px) {
+    .aboutContent{
+    width: 85%; 
+  }
+  .stackContent{
+    width: 85%;
+  }
+  .stackContainer h2{
+      font-size: 2.4em;
+    }
+}
 </style>
