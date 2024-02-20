@@ -17,14 +17,21 @@ const { frontmatter } = Astro.props;
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
-    <title>{frontmatter.title}</title>
+    <title>{title}</title>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q0HQWQ98XF"></script>
     <script>
+      interface Window {
+        dataLayer: any[];
+      }
+
       window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-    
+      
+      function gtag(): void {
+        window.dataLayer.push(arguments);
+      }
+
+      gtag('js');
       gtag('config', 'G-Q0HQWQ98XF');
     </script>
   </head>
