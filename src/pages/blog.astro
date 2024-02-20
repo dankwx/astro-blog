@@ -1,23 +1,155 @@
 ---
 import Layout from "../layouts/PageLayout.astro";
 import "../styles/global.css";
+const blogPost = await Astro.glob("./posts/*.md");
 ---
 
 <Layout title="danblog">
   <main>
-    <h1>incompleto ainda infelizmente</h1>
-    <p>em breve vai ta td certo</p>
-    <ul>
-      <li><a href="/posts/post-1/">Post 1</a></li>
-      <li><a href="/posts/post-2/">Post 2</a></li>
-      <li><a href="/posts/post-3/">Post 3</a></li>
-    </ul>
+    <div class="blogWrapper">
+      <div class="blogContainer">
+        <div class="cardsWrapper">
+          <h2>Blog Posts</h2>
+          {
+            blogPost.map((poster) => (
+              <a
+                href={poster.url}
+                style="text-decoration:none;color: black;"
+                class="card"
+              >
+                <article>
+                  <div class="postName">
+                    <h3>{poster.frontmatter.title}</h3>
+                    {poster.frontmatter.category && (
+                      <span>{poster.frontmatter.category.join(", ")}</span>
+                    )}
+                  </div>
+                  <div class="postDate">
+                    {poster.frontmatter.pubDate && (
+                      <span>
+                        {new Date(
+                          poster.frontmatter.pubDate
+                        ).toLocaleDateString("en-GB")}
+                      </span>
+                    )}
+                  </div>
+                </article>
+              </a>
+            ))
+          }
+        </div>
+      </div>
+    </div>
   </main>
 </Layout>
 
 <style>
+  
   main {
     width: 100%;
     height: 100%;
+  }
+  .blogWrapper{
+    width: 100%;
+    margin-top: 1em;
+    padding: 4em 0;
+    background-color: #f4e5e5;
+    border-top: 1px solid;
+    
+  }
+  .blogContainer{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .cardsWrapper{
+    width: 55%;
+    display: flex;
+    flex-direction: column;
+  }
+  h2{
+    font-size: 3em;
+    font-family: "Aleo", serif;
+    font-weight: 700;
+    padding-bottom: 2em;
+  }
+  a {
+    width: 100%;
+    height: auto;
+    border: solid 2px;
+    margin-bottom: 1rem;
+    display: block;
+    box-sizing: border-box;
+    padding: 2em 0;
+    cursor: pointer;
+    box-shadow:
+      1px 1px 0 0 #555b6e,
+      2px 2px 0 0 #555b6e,
+      3px 3px 0 0 #555b6e,
+      4px 4px 0 0 #555b6e,
+      5px 5px 0 0 #555b6e,
+      6px 6px 0 0 #555b6e;
+
+    transition: box-shadow 0.3s ease;
+  }
+  a:hover {
+    box-shadow: none;
+  }
+  article {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2em;
+  }
+  .postName {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    gap: 1em;
+  }
+  h3 {
+    margin: 0;
+    font-size: 2em;
+    font-weight: bold;
+    line-height: 1.3em;
+  }
+  .postDate {
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+  span {
+    font-size: 1.4em;
+  }
+
+  @media (max-width: 768px) {
+    .cardsWrapper{
+      width: 90%;
+    }
+    .postsContent{
+    width:90%;
+  }
+  .content{
+    width: 90%;
+  }
+  .name{
+    font-size:3.2rem;
+  }
+  .postName{
+    margin-bottom: 1em;
+  }
+  .postDate span{
+    word-break: break-word;
+  }
+  article{
+    flex-direction: column;
+    word-break: none;
+    align-items:start;
+  }
+}
   }
 </style>
