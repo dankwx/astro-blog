@@ -1,13 +1,13 @@
 ---
 layout: "../../layouts/PostLayout.astro"
 title: "O que me levou a escolher entre Astro e não Next.js"
-pubDate: 2022-07-08
+pubDate: 2024-02-17
 description: "Por que eu escolhi Astro.js"
 author: "Daniel Kondlatsch"
 image:
   url: "https://docs.astro.build/assets/full-logo-light.png"
   alt: "The full Astro logo."
-category: ["astro", "blogging", "learning in public"]
+category: ["astro", "web development"]
 ---
 
 <style>
