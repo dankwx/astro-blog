@@ -6,7 +6,7 @@ description: "I had some challenges, but asking in the community really helped!"
 image:
   url: "https://docs.astro.build/assets/rays.webp"
   alt: "Thumbnail of Astro rays."
-pubDate: 2024-03-07
+pubDate: 2024-03-06
 category: ["next.js","postgresql"]
 ---
 

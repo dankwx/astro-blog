@@ -6,7 +6,7 @@ description: "descricao etc etc"
 image:
   url: "https://docs.astro.build/assets/arc.webp"
   alt: "Thumbnail of Astro arcs."
-pubDate: 2024-02-27
+pubDate: 2024-02-26
 category: ["windows", "linux"]
 ---
 
