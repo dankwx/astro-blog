@@ -65,7 +65,7 @@ category: ["next.js","postgresql"]
     color: #415a77;
   }
 
-img{
+img:last-child{
   width: 100%;
   height: 100%;
 }
