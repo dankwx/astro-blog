@@ -100,6 +100,27 @@ o que um registro de vendas precisa.
 Também utilizei PostgreSQL para armazenar as credenciais de login, junto com o
 NextAuth.js, e criei um middleware simples para probir qualquer tentativa de acesso
 sem uma sessão ativa.
+
+Definitivamente a parte mais complicada foi a criação do middleware, foi a última feature que 
+implementei e foi a mais demorada, fiquei cerca de 2 dias testando vários e vários tipos e 
+lógicas diferentes, mas o que importa é que consegui, e claro, aprendi um conceito muito
+útil e importante(com segurança não se brinca).
+
+## Shadcn
+
+Outra coisa que utilizei pela primeira vez foi o framework de UI Shadcn UI e me surpreendi
+com a facilidade de implementar os componentes, alterará-los e também com a vasta gama
+de temas já prontos para utilizar.
+
+Eu nunca tinha utilizado muito frameworks que utilizam Tailwind mas desta vez eu agradeço
+por ter tentando denovo e sendo sincero, talvez daqui pra frente eu utilize apenas Tailwind
+e aposente, por ora o SCSS. Ambos são ótimos mas gostei de como trabalhei o Tailwind.
+
+Emfim, a criação deste sistema de vendas me deu muita experiência com conceitos que eu conhecia
+mas não tinha aplicado em algo, que tinha necessidade de utilizá-los, quebrou certos preconceitos
+com estas tecnologias, e o que mais aprecio: mais conhecimento pro meu acervo.
+
+👋
 </div>
 </div>
 </main>
