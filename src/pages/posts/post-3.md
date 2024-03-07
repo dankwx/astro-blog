@@ -106,9 +106,9 @@ implementei e foi a mais demorada, fiquei cerca de 2 dias testando vários e vá
 lógicas diferentes, mas o que importa é que consegui, e claro, aprendi um conceito muito
 útil e importante(com segurança não se brinca).
 
-## Shadcn
+## Shadcn UI
 
-Outra coisa que utilizei pela primeira vez foi o framework de UI Shadcn UI e me surpreendi
+Outra coisa que utilizei pela primeira vez foi o framework de UI, o Shadcn, e me surpreendi
 com a facilidade de implementar os componentes, alterará-los e também com a vasta gama
 de temas já prontos para utilizar.
 
