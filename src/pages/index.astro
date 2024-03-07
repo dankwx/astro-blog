@@ -2,6 +2,22 @@
 import Layout from "../layouts/PageLayout.astro";
 import "../styles/global.css";
 const blogPost = await Astro.glob("./posts/*.md");
+const limitedPosts = blogPost.sort((a, b) => {
+  // Handle missing pubDate
+  if (!a.frontmatter.pubDate || !b.frontmatter.pubDate) {
+    console.warn("Post(s) missing pubDate. Sorting by title.");
+    return a.frontmatter.title.localeCompare(b.frontmatter.title); // Sort by title if pubDate is missing
+  }
+
+  // Extract timestamps for comparison
+  const timestampA = new Date(a.frontmatter.pubDate).getTime(); // Get milliseconds since epoch
+  const timestampB = new Date(b.frontmatter.pubDate).getTime();
+
+  // Sort based on timestamps (descending order for most recent)
+  return timestampB - timestampA;
+});
+
+const threeMostRecent = limitedPosts.slice(0, 3);
 ---
 
 <Layout title="Daniel Kondlatsch - dankwx">
@@ -22,7 +38,7 @@ const blogPost = await Astro.glob("./posts/*.md");
         <h1 class="postSectionTitle">Posts</h1>
         <div class="cardsWrapper">
           {
-            blogPost.map((poster) => (
+            threeMostRecent.map((poster) => (
               <a
                 href={poster.url}
                 style="text-decoration:none;color: black;"
@@ -208,7 +224,7 @@ const blogPost = await Astro.glob("./posts/*.md");
   span {
     font-size: 1.4em;
   }
-  .morePosts{
+  .morePosts {
     padding-top: 3em;
   }
   .morePosts a {
@@ -247,30 +263,30 @@ const blogPost = await Astro.glob("./posts/*.md");
     font-family: "Poppins", sans-serif;
     line-height: 1.6em;
   }
-  
+
   @media (max-width: 768px) {
-  .apresentationContent{
-    width: 85%;
+    .apresentationContent {
+      width: 85%;
+    }
+    .postsContent {
+      width: 90%;
+    }
+    .content {
+      width: 90%;
+    }
+    .name {
+      font-size: 3.2rem;
+    }
+    .postName {
+      margin-bottom: 1em;
+    }
+    .postDate span {
+      word-break: break-word;
+    }
+    article {
+      flex-direction: column;
+      word-break: none;
+      align-items: start;
+    }
   }
-  .postsContent{
-    width:90%;
-  }
-  .content{
-    width: 90%;
-  }
-  .name{
-    font-size:3.2rem;
-  }
-  .postName{
-    margin-bottom: 1em;
-  }
-  .postDate span{
-    word-break: break-word;
-  }
-  article{
-    flex-direction: column;
-    word-break: none;
-    align-items:start;
-  }
-}
 </style>
