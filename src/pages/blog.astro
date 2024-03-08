@@ -2,6 +2,20 @@
 import Layout from "../layouts/PageLayout.astro";
 import "../styles/global.css";
 const blogPost = await Astro.glob("./posts/*.md");
+const limitedPosts = blogPost.sort((a, b) => {
+  // Handle missing pubDate
+  if (!a.frontmatter.pubDate || !b.frontmatter.pubDate) {
+    console.warn("Post(s) missing pubDate. Sorting by title.");
+    return a.frontmatter.title.localeCompare(b.frontmatter.title); // Sort by title if pubDate is missing
+  }
+
+  // Extract timestamps for comparison
+  const timestampA = new Date(a.frontmatter.pubDate).getTime(); // Get milliseconds since epoch
+  const timestampB = new Date(b.frontmatter.pubDate).getTime();
+
+  // Sort based on timestamps (descending order for most recent)
+  return timestampB - timestampA;
+});
 ---
 
 <Layout title="danblog">
@@ -11,7 +25,7 @@ const blogPost = await Astro.glob("./posts/*.md");
         <div class="cardsWrapper">
           <h2>Blog Posts</h2>
           {
-            blogPost.map((poster) => (
+            limitedPosts.map((poster) => (
               <a
                 href={poster.url}
                 style="text-decoration:none;color: black;"

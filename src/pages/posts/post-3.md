@@ -7,7 +7,7 @@ image:
   url: "https://docs.astro.build/assets/rays.webp"
   alt: "Thumbnail of Astro rays."
 pubDate: 2024-03-06
-category: ["next.js","postgresql"]
+category: ["next.js", "postgresql"]
 ---
 
 <style>
@@ -101,8 +101,8 @@ Também utilizei PostgreSQL para armazenar as credenciais de login, junto com o
 NextAuth.js, e criei um middleware simples para probir qualquer tentativa de acesso
 sem uma sessão ativa.
 
-Definitivamente a parte mais complicada foi a criação do middleware, foi a última feature que 
-implementei e foi a mais demorada, fiquei cerca de 2 dias testando vários e vários tipos e 
+Definitivamente a parte mais complicada foi a criação do middleware, foi a última feature que
+implementei e foi a mais demorada, fiquei cerca de 2 dias testando vários e vários tipos e
 lógicas diferentes, mas o que importa é que consegui, e claro, aprendi um conceito muito
 útil e importante(com segurança não se brinca).
 
@@ -121,6 +121,7 @@ mas não tinha aplicado em algo, que tinha necessidade de utilizá-los, quebrou 
 com estas tecnologias, e o que mais aprecio: mais conhecimento pro meu acervo.
 
 👋
+
 </div>
 </div>
 </main>
