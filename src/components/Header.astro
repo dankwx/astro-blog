@@ -1,10 +1,11 @@
 ---
-
+import { Image } from "astro:assets";
+import siteIcon from "./siteIcon.png"
 ---
 
 <div class="headerWrapper">
   <div class="leftContainer">
-    <img src="https://img.icons8.com/?size=64&id=geMFbLqfiOHh&format=png" />
+    <Image src={siteIcon} width={33} alt="ff"/>
     <p>dankwx</p>
   </div>
   <div class="rightContainer">
@@ -15,7 +16,7 @@
   </div>
   <div class="mobileContainer">
     <div class="mobileTitle">
-      <img src="https://img.icons8.com/?size=64&id=geMFbLqfiOHh&format=png" />
+      <img src="https://img.icons8.com/material-rounded/24/face-id.png" alt="face-id" />
       <p>dankwx</p>
     </div>
     <div class="mobileMenu">
@@ -84,8 +85,8 @@
     justify-content: center;
     align-items: center;
   }
-  .leftContainer img {
-    width: 20%;
+  p{
+    margin-left: 0.2em;
   }
   .rightContainer {
     display: flex;
