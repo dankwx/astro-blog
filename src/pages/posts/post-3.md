@@ -1,6 +1,6 @@
 ---
 layout: "../../layouts/PostLayout.astro"
-title: "Eu criei um Sistema de Registro de Vendas para a empresa do meu pai."
+title: "Eu criei um Sistema de Registro de Vendas completo funcional."
 author: Astro Learner
 description: "I had some challenges, but asking in the community really helped!"
 image:
@@ -76,7 +76,7 @@ img:last-child{
 <div class="markdownContent">
 <div class="markdownBase">
 
-# Eu criei um Sistema de Registro de Vendas para a empresa do meu pai
+# Eu criei um Sistema de Registro de Vendas completo funcional
 
 <p class="postDate">6 de Março, 2024</p>
 
