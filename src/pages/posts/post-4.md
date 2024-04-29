@@ -1,6 +1,6 @@
 ---
 layout: "../../layouts/PostLayout.astro"
-title: "Eu comecei a aprender C#."
+title: "Eu comecei um novo projeto, e ele é complexo."
 author: Astro Learner
 description: "I had some challenges, but asking in the community really helped!"
 image:
@@ -76,7 +76,7 @@ img:last-child{
 <div class="markdownContent">
 <div class="markdownBase">
 
-# Eu comecei a aprender C#.
+# Eu comecei um novo projeto, e ele é complexo.
 
 <p class="postDate">18 de Março, 2024</p>
 
