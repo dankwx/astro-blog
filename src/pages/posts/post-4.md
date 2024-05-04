@@ -80,6 +80,8 @@ img:last-child{
 
 <p class="postDate">18 de Março, 2024</p>
 
+Eternizing.
+
 </div>
 </div>
 </main>
