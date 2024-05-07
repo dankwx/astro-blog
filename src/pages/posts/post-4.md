@@ -78,6 +78,8 @@ img:last-child{
 
 # Eu comecei um novo projeto, e ele é complexo.
 
+Post em breve comm mais detalhes
+
 <p class="postDate">18 de Março, 2024</p>
 
 Eternizing.
