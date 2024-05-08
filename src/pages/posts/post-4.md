@@ -5,9 +5,9 @@ author: Astro Learner
 description: "I had some challenges, but asking in the community really helped!"
 image:
   url: "https://docs.astro.build/assets/rays.webp"
-  alt: "Thumbnail of Astro rays."
+  alt: "Thumbnail of post."
 pubDate: 2024-03-18
-category: ["c#", "dotnet"]
+category: ["next", "prisma"]
 ---
 
 <style>
