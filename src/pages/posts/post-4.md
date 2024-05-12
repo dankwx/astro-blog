@@ -4,7 +4,7 @@ title: "Eu comecei um novo projeto, e ele é complexo."
 author: dankwx
 description: "I had some challenges, but asking in the community really helped!"
 image:
-  url: "https://docs.astro.build/assets/rays.webp"
+  url: "https://dnourl.com"
   alt: "Thumbnail of post."
 pubDate: 2024-03-18
 category: ["next", "prisma"]
