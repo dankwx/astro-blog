@@ -2,7 +2,7 @@
 layout: "../../layouts/PostLayout.astro"
 title: "Eu comecei um novo projeto, e ele é complexo."
 author: dankwx
-description: "I had some challenges, but asking in the community really helped!"
+description: "Creating Eternizing App"
 image:
   url: "https://dnourl.com"
   alt: "Thumbnail of post."
