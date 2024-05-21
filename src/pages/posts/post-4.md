@@ -1,6 +1,6 @@
 ---
 layout: "../../layouts/PostLayout.astro"
-title: "Eu comecei um novo projeto, e ele é complexo."
+title: "Aprendendo C."
 author: dankwx
 description: "Creating Eternizing App"
 image:
