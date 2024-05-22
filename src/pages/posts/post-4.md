@@ -2,7 +2,7 @@
 layout: "../../layouts/PostLayout.astro"
 title: "Aprendendo C."
 author: dankwx
-description: "Creating Eternizing App"
+description: "Aprendendo C."
 image:
   url: "https://dnourl.com"
   alt: "Thumbnail of post."
