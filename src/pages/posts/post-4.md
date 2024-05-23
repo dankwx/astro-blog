@@ -4,7 +4,7 @@ title: "Aprendendo C."
 author: dankwx
 description: "Aprendendo C."
 image:
-  url: "https://dnourl.com"
+  url: "https://www.dankwx.com"
   alt: "Thumbnail of post."
 pubDate: 2024-03-18
 category: ["next", "prisma"]
