@@ -2,7 +2,7 @@
 layout: "../../layouts/PostLayout.astro"
 title: "Aprendendo C."
 author: dankwx
-description: "Aprendendo C."
+description: "Aprendendo C++."
 image:
   url: "https://www.dankwx.com"
   alt: "Thumbnail of post."
