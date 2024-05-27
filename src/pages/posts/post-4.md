@@ -76,7 +76,7 @@ img:last-child{
 <div class="markdownContent">
 <div class="markdownBase">
 
-# Eu comecei um novo projeto, e ele é complexo.
+# Eu comecei a aprender C++
 
 Post em breve comm mais detalhes
 
