@@ -5,7 +5,7 @@ author: dankwx
 description: "Aprendendo C++."
 image:
   url: "https://www.dankwx.com"
-  alt: "Thumbnail of post."
+  alt: "Thumbnail"
 pubDate: 2024-03-18
 category: ["c++", "prisma"]
 ---
