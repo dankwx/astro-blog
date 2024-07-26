@@ -1,13 +1,13 @@
 ---
 layout: "../../layouts/PostLayout.astro"
-title: "Aprendendo C++."
+title: "Meu mais novo maior projeto."
 author: dankwx
-description: "Aprendendo C++."
+description: "Criando uma... rede social."
 image:
-  url: "https://www.dankwx.com"
+  url: "https://eternizing-v2.vercel.app/"
   alt: "Thumbnail"
-pubDate: 2024-03-18
-category: ["c++", "prisma"]
+pubDate: 2024-07-26
+category: ["next", "supabase"]
 ---
 
 <style>
