@@ -96,7 +96,8 @@ gostando do caminho que está levando até então.
 
 ## A stack que eu escolhi pra esse projeto ambicioso
 
-
+Pela primeira vez estou usando Supabase para produção, tanto para database como para autenticação com supabase-auth.
+Next com Typescript. Comecei com Google Authentication e Google Firebase para armazenamento, mas felizmente migrei para Supabase.
 
 <p class="postDate">26 de Julho, 2024</p>
 
