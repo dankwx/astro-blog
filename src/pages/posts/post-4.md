@@ -5,7 +5,7 @@ author: dankwx
 description: "Criando uma... rede social."
 image:
   url: "https://eternizing-v2.vercel.app/"
-  alt: "Thumbnail"
+  alt: "Eternizing Thumbnail"
 pubDate: 2024-07-26
 category: ["next", "supabase", "supabase-auth"]
 ---
