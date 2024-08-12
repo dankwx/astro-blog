@@ -99,6 +99,10 @@ gostando do caminho que está levando até então.
 Pela primeira vez estou usando Supabase para produção, tanto para database como para autenticação com supabase-auth.
 Next com Typescript. Comecei com Google Authentication e Google Firebase para armazenamento, mas felizmente migrei para Supabase.
 
+Uma coisa que está me ajudando muito são as RPC do Supabase, resumidamente, posso deixar a lógica de consulta como uma function no Supabase, e no meu código
+posso chamar ela passando uma varíavel, assim ela me retorna, por exemplo, um select complexo, passando apenas um variável pelo código, separando bem
+a lógica e tirando um pouco a complexidade(e limitação) da linguagem do Supabase pelo próprio código.
+
 <p class="postDate">26 de Julho, 2024</p>
 
 Eternizing.
