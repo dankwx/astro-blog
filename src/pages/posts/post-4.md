@@ -1,6 +1,6 @@
 ---
 layout: "../../layouts/PostLayout.astro"
-title: "Meu mais novo maior projeto."
+title: "Criando uma... rede social."
 author: dankwx
 description: "Criando uma... rede social."
 image:
@@ -76,7 +76,7 @@ img:last-child{
 <div class="markdownContent">
 <div class="markdownBase">
 
-# Meu mais novo maior projeto
+# Criando uma... rede social.
 
 Talvez eu esteja um pouco tarde em dizer que comecei, pois dei início a este projeto já tem umas duas semanas.. mas se
 comparar o tempo que ele pode levar para terminar, estou na hora certa.
