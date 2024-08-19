@@ -1,4 +1,4 @@
 
-personal blog made from scratch with astro,js
+personal blog made with astro,js
 future readme updates soon
 made with astro.js
