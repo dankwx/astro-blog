@@ -7,7 +7,7 @@ image:
   url: "https://eternizing-v2.vercel.app/"
   alt: "Eternizing Thumbnail"
 pubDate: 2024-07-26
-category: ["next", "supabase", "supabase-auth", "RPC"]
+category: ["nextjs", "supabase", "supabase-auth", "RPC"]
 ---
 
 <style>
