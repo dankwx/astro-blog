@@ -25,9 +25,6 @@ category: ["nextjs", "supabase", "supabase-auth", "RPC"]
     margin-top: 1em;
     margin-bottom: 1em;
   }
-  /*.markdownBase{*/
-  /*  width: 85%;*/
-  /*}*/
   .postDate{
     --tw-text-opacity: 1;
     color: rgb(91, 91, 91);
