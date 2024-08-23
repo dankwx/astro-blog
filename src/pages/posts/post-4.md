@@ -1,7 +1,7 @@
 ---
 layout: "../../layouts/PostLayout.astro"
 title: "Criando uma... rede social."
-author: dankwx
+author: Daniel Kondlatsch
 description: "Criando uma... rede social."
 image:
   url: "https://eternizing-v2.vercel.app/"
