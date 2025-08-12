@@ -3,183 +3,366 @@ import { Image } from "astro:assets";
 import siteIcon from "./siteIcon.png"
 ---
 
-<div class="headerWrapper">
-  <div class="leftContainer">
-    <Image src={siteIcon} width={33} alt="ff"/>
-    <p>dankwx</p>
-  </div>
-  <div class="rightContainer">
-    <a href="/">Início</a>
-    <a href="https://www.dankwx.com" target="_blank">Portfólio</a>
-    <a href="/about/">Sobre</a>
-    <a href="/blog/">Blog</a>
-  </div>
-  <div class="mobileContainer">
-    <div class="mobileTitle">
-      <img src="https://img.icons8.com/material-rounded/24/face-id.png" alt="face-id" />
-      <p>dankwx</p>
+<header class="header">
+  <div class="header-container">
+    <div class="logo">
+      <Image src={siteIcon} width={32} height={32} alt="dankwx logo"/>
+      <span>dankwx</span>
     </div>
-    <div class="mobileMenu">
-      <svg id="menuIcon" xmlns="http://www.w3.org/2000/svg" width="2.6em" height="2.6em" viewBox="0 0 16 16">
-  <path fill="currentColor" fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
-</svg>
-      <div class="overlay">
-        <div class="overlay-content">
-          <div class="leftSection">
-            <a href="/">Início</a>
-            <a href="/about/">Sobre</a>
-            <a href="/blog/">Blog</a>
-          </div>
-          <div class="rightSection">
-            <svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" viewBox="0 0 24 24"><path fill="currentColor" d="m8.382 17.025l-1.407-1.4L10.593 12L6.975 8.4L8.382 7L12 10.615L15.593 7L17 8.4L13.382 12L17 15.625l-1.407 1.4L12 13.41z"/></svg>
-          </div>
-          
+    
+    <nav class="desktop-nav">
+      <a href="/" class="nav-link">Início</a>
+      <a href="/about" class="nav-link">Sobre</a>
+      <a href="/blog" class="nav-link">Blog</a>
+      <a href="https://www.dankwx.com" target="_blank" class="nav-link external">
+        Portfólio
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M14,3V5H17.59L7.76,14.83L9.17,16.24L19,6.41V10H21V3M19,19H5V5H12V3H5C3.89,3 3,3.9 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V12H19V19Z" />
+        </svg>
+      </a>
+    </nav>
+
+    <button class="mobile-menu-button" id="mobileMenuButton" aria-label="Menu">
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+    </button>
+  </div>
+
+  <!-- Mobile Menu Overlay -->
+  <div class="mobile-menu-overlay" id="mobileMenuOverlay">
+    <div class="mobile-menu-content">
+      <div class="mobile-menu-header">
+        <div class="mobile-logo">
+          <Image src={siteIcon} width={24} height={24} alt="dankwx logo"/>
+          <span>dankwx</span>
         </div>
+        <button class="close-button" id="closeButton" aria-label="Fechar menu">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
+          </svg>
+        </button>
       </div>
+      
+      <nav class="mobile-nav">
+        <a href="/" class="mobile-nav-link">Início</a>
+        <a href="/about" class="mobile-nav-link">Sobre</a>
+        <a href="/blog" class="mobile-nav-link">Blog</a>
+        <a href="https://www.dankwx.com" target="_blank" class="mobile-nav-link external">
+          Portfólio
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M14,3V5H17.59L7.76,14.83L9.17,16.24L19,6.41V10H21V3M19,19H5V5H12V3H5C3.89,3 3,3.9 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V12H19V19Z" />
+          </svg>
+        </a>
+      </nav>
     </div>
   </div>
-</div>
+</header>
 
 <script>
-  const menuIcon = document.getElementById('menuIcon');
+  // Mobile menu functionality
+  const mobileMenuButton = document.getElementById('mobileMenuButton');
+  const mobileMenuOverlay = document.getElementById('mobileMenuOverlay');
+  const closeButton = document.getElementById('closeButton');
 
-  if (menuIcon) {
-    menuIcon.addEventListener('click', function() {
-      const overlay = document.querySelector('.overlay');
-      if (overlay) {
-        overlay.classList.toggle('active');
-      }
-    });
+  function openMobileMenu() {
+    mobileMenuOverlay?.classList.add('active');
+    document.body.style.overflow = 'hidden';
   }
 
-  const closeIcon = document.querySelector('.rightSection svg');
-  if (closeIcon) {
-    closeIcon.addEventListener('click', function() {
-      const overlay = document.querySelector('.overlay');
-      if (overlay) {
-        overlay.classList.remove('active');
+  function closeMobileMenu() {
+    mobileMenuOverlay?.classList.remove('active');
+    document.body.style.overflow = '';
+  }
+
+  mobileMenuButton?.addEventListener('click', openMobileMenu);
+  closeButton?.addEventListener('click', closeMobileMenu);
+
+  // Close menu when clicking on overlay
+  mobileMenuOverlay?.addEventListener('click', (e) => {
+    if (e.target === mobileMenuOverlay) {
+      closeMobileMenu();
+    }
+  });
+
+  // Close menu when pressing Escape key
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      closeMobileMenu();
+    }
+  });
+
+  // Close menu when clicking on mobile nav links
+  const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+  mobileNavLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      if (!link.classList.contains('external')) {
+        closeMobileMenu();
       }
     });
-  }
+  });
+
+  // Active link highlighting
+  const currentPath = window.location.pathname;
+  const navLinks = document.querySelectorAll('.nav-link, .mobile-nav-link');
+  
+  navLinks.forEach(link => {
+    const href = link.getAttribute('href');
+    if (href && (href === currentPath || (currentPath.startsWith(href) && href !== '/'))) {
+      link.classList.add('active');
+    }
+  });
 </script>
 
 <style>
-  .headerWrapper {
-    width: 100%;
-    height: 4rem;
-    padding-top: 1em;
-    max-height: 4rem;
-    box-sizing: border-box;
-    display: flex;
-    justify-content: space-around;
-  }
-  .mobileContainer{
-    display: none;
-  }
-  .leftContainer {
-    font-weight: bold;
-    font-size: 1.8em;
-    display: flex;
-    box-sizing: border-box;
-    justify-content: space-around;
-    justify-content: center;
-    align-items: center;
-  }
-  p{
-    margin-left: 0.2em;
-  }
-  .rightContainer {
-    display: flex;
-    justify-content: space-between;
-    box-sizing: border-box;
-    justify-content: center;
-    align-items: center;
-    gap: 2em;
-  }
-  a {
-    text-decoration: none;
-    color: black;
-    font-size: 1.4em;
+  /* Header */
+  .header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid #e2e8f0;
+    transition: all 0.3s ease;
   }
 
+  .header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  /* Logo */
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-weight: 700;
+    font-size: 1.25rem;
+    color: #0f172a;
+    text-decoration: none;
+  }
+
+  .logo img {
+    border-radius: 0.375rem;
+  }
+
+  /* Desktop Navigation */
+  .desktop-nav {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .nav-link {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 0.375rem;
+    padding: 0.5rem 0;
+    color: #475569;
+    font-weight: 500;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+
+  .nav-link:hover {
+    color: #2563eb;
+  }
+
+  .nav-link.active {
+    color: #2563eb;
+  }
+
+  .nav-link.active::after {
+    content: '';
+    position: absolute;
+    bottom: -0.75rem;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: #2563eb;
+    border-radius: 1px;
+  }
+
+  .nav-link.external svg {
+    opacity: 0.6;
+    transition: opacity 0.3s ease;
+  }
+
+  .nav-link.external:hover svg {
+    opacity: 1;
+  }
+
+  /* Mobile Menu Button */
+  .mobile-menu-button {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    gap: 0.25rem;
+  }
+
+  .hamburger-line {
+    width: 1.25rem;
+    height: 2px;
+    background: #475569;
+    border-radius: 1px;
+    transition: all 0.3s ease;
+  }
+
+  .mobile-menu-button:hover .hamburger-line {
+    background: #2563eb;
+  }
+
+  /* Mobile Menu Overlay */
+  .mobile-menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(4px);
+    z-index: 200;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+  }
+
+  .mobile-menu-overlay.active {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .mobile-menu-content {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    max-width: 320px;
+    height: 100vh;
+    background: white;
+    box-shadow: -4px 0 20px rgba(0, 0, 0, 0.1);
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+    overflow-y: auto;
+  }
+
+  .mobile-menu-overlay.active .mobile-menu-content {
+    transform: translateX(0);
+  }
+
+  .mobile-menu-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 1.5rem;
+    border-bottom: 1px solid #e2e8f0;
+  }
+
+  .mobile-logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 700;
+    color: #0f172a;
+  }
+
+  .close-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    background: none;
+    border: none;
+    color: #475569;
+    cursor: pointer;
+    border-radius: 0.375rem;
+    transition: all 0.3s ease;
+  }
+
+  .close-button:hover {
+    background: #f1f5f9;
+    color: #2563eb;
+  }
+
+  /* Mobile Navigation */
+  .mobile-nav {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 1.5rem;
+    gap: 1rem;
+  }
+
+  .mobile-nav-link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 0;
+    color: #475569;
+    font-weight: 500;
+    font-size: 1.125rem;
+    text-decoration: none;
+    border-bottom: 1px solid #f1f5f9;
+    transition: color 0.3s ease;
+  }
+
+  .mobile-nav-link:hover {
+    color: #2563eb;
+  }
+
+  .mobile-nav-link.active {
+    color: #2563eb;
+    font-weight: 600;
+  }
+
+  .mobile-nav-link.external {
+    gap: 0.5rem;
+  }
+
+  /* Responsive Design */
   @media (max-width: 768px) {
-    .headerWrapper{
-     
+    .header-container {
+      padding: 0 1rem;
     }
-    .leftContainer, .rightContainer{
+
+    .desktop-nav {
       display: none;
     }
-  .mobileContainer{
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  .mobileTitle{
-    display:flex;
-    align-items: center;
-    min-width: 40%;
-    height: 100%;
-    padding-left:1em;
 
+    .mobile-menu-button {
+      display: flex;
+    }
   }
-  .mobileTitle p{
-    font-family: Lato,sans-serif;
-    font-weight: bold;
-    font-size:1.8em;
-  }
-  .mobileTitle img{
-    width: 35px;
-  }
-  .mobileMenu{
-    min-width: 60%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: end;
-    padding-right:1em;
-  }
-.overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: white;
-  transition: transform 0.3s ease-in-out;
-  transform: translateX(100%);
-  background-color: #faf9f9;
-  display:flex;
-  justify-content:center;
-  padding:1em;
-}
 
-.overlay.active {
-  transform: translateX(0);
-}
-.overlay-content{
-  width: 80%;
-  height: 100%;
-  display:flex;
-  flex-direction: row;
-}
-.overlay-content .leftSection{
-  display: flex;
-  width:60%;
-  flex-direction: column;
-  padding-top:2em;
-  padding-left: 1em;
-}
-.overlay-content .leftSection a{
-  font-family: "Poppins", sans-serif;
-  font-size: 2em;
-  margin-bottom: 1em;
-}
-.overlay-content .rightSection{
-  width: 40%;
-  padding-top: 2em;
-  display:flex;
-  justify-content: center;
-}
+  @media (max-width: 480px) {
+    .mobile-menu-content {
+      width: 100%;
+      max-width: none;
+    }
+  }
+
+  /* Scroll behavior */
+  @media (min-width: 769px) {
+    .header {
+      transition: all 0.3s ease;
+    }
+
+    .header.scrolled {
+      background: rgba(255, 255, 255, 0.95);
+      box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+    }
+  }
 </style>
