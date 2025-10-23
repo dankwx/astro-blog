@@ -75,8 +75,8 @@ img:last-child{
 
 # Criando uma rede social
 
-Talvez eu esteja um pouco tarde em dizer que comecei, pois dei início a este projeto já tem umas duas semanas.. mas se
-comparar o tempo que ele pode levar para terminar, estou na hora certa.
+Talvez eu esteja um pouco tarde em dizer que comecei, pois dei início a este projeto já tem um tempo.. mas se
+comparar o tempo que ele pode levar para terminar, nunca é tarde..
 
 Ano passado, 2023, comecei um projeto "eternizing", no qual seria basicamente uma rede social, com o propósito de "eternizar"
 descobertas das pessoas, mais precisamente musicas e canais de youtube.

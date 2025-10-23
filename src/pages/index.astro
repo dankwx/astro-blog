@@ -80,7 +80,7 @@ const threeMostRecent = limitedPosts.slice(0, 3);
                   <div class="post-meta">
                     {post.frontmatter.category && (
                       <div class="post-categories">
-                        {post.frontmatter.category.map((cat: string) => (
+                        {(Array.isArray(post.frontmatter.category) ? post.frontmatter.category : [post.frontmatter.category]).map((cat: string) => (
                           <span class="category-tag">{cat}</span>
                         ))}
                       </div>
