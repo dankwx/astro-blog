@@ -1,6 +1,6 @@
 ---
 layout: "../../layouts/PostLayout.astro"
-title: "Atualização na minha rede social"
+title: "Atualizações sobre meu projeto Mirsui"
 date: 2025-10-21
 category: ["Atualizações", "nextjs", "supabase", "frontend"]
 description: "Novidades sobre o desenvolvimento da minha rede social."
@@ -69,7 +69,7 @@ img:last-child{
 <div class="markdownContent">
 <div class="markdownBase">
 
-# Atualização na minha rede social
+# Atualizações sobre meu projeto Mirsui
 
 <p class="postDate">21 de Outubro, 2025</p>
 
