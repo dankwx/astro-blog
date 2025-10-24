@@ -75,6 +75,8 @@ img:last-child{
 
 # Criando uma rede social
 
+<p class="postDate">26 de Julho, 2024</p>
+
 Talvez eu esteja um pouco tarde em dizer que comecei, pois dei início a este projeto já tem um tempo.. mas se
 comparar o tempo que ele pode levar para terminar, nunca é tarde..
 
@@ -100,7 +102,6 @@ Uma coisa que está me ajudando muito são as RPC do Supabase, resumidamente, po
 posso chamar ela passando uma varíavel, assim ela me retorna, por exemplo, um select complexo, passando apenas um variável pelo código, separando bem
 a lógica e tirando um pouco a complexidade(e limitação) da linguagem do Supabase pelo próprio código.
 
-<p class="postDate">26 de Julho, 2024</p>
 
 Eternizing.
 
