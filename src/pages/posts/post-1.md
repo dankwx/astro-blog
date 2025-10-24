@@ -1,6 +1,6 @@
 ---
 layout: "../../layouts/PostLayout.astro"
-title: "O que me levou a escolher entre Astro e não Next.js"
+title: "Escolha do Astro.js pra esse blog"
 pubDate: 2024-02-16
 description: "Por que eu escolhi Astro.js"
 author: "Daniel Kondlatsch"
@@ -73,80 +73,52 @@ category: ["astro", "web development"]
 <div class="markdownContent">
 <div class="markdownBase">
 
-# O que me levou a escolher entre Astro e não Next.js
+# Escolha do Astro.js pra esse blog
 
 <p class="postDate">16 de Fevereiro, 2024</p>
 
-Quando a idéia de criar esse blog me veio a cabeça, eu sabia que teria uma escolha difícil entre
-qual framework escolher, e eram apenas duas opções, baseado na quantidade de elogios que via
-na internet, **Astro.js** e **Next.js**.
+Quando a ideia de criar esse blog me veio à cabeça, sabia que teria uma escolha difícil entre qual framework escolher. Eram apenas duas opções, baseado na quantidade de elogios que via na internet: **Astro.js** e **Next.js**.
 
-## A grande dúvida
+## Dúvida
 
-Foi uma escolha difícil, porque Next.js é um framework muito sólido, maduro e com
-uma grande comunidade já estabelecida. Eu já tinha usado Next.js uma vez, em um projeto de faculdade, mas acabei
-não concluindo porque meu professor da época instruiu todos alunos a usarem PHP com Laravel,
-para ficar mais normalizado todos trabalhos, então fui obrigado a deixar minha Dashboard bem
-feita e polida em Next.js pra trás.(Mas foi a última vez que usei PHP na minha vida).
+Foi uma escolha difícil porque Next.js é um framework beeem estabelecido e elogiado. Eu já tinha usado Next.js uma vez num projeto de faculdade, mas acabei não concluindo porque meu professor da época instruiu todos os alunos a usarem PHP com Laravel pra normalizar os trabalhos. Então fui obrigado a deixar minha dashboard bem feita e polida em Next.js pra trás(mas gostei de usar Laravel)
 
-Durante o processo de criação desse meu projeto, não encontrei problema nenhum, e achei a
-curva de aprendizado do Next.js muito confortável. Mas é ai que entra o grande ponto
-da questão. Se eu utilizei o Next.js gostei e me adaptei rápido, por que eu acabei
-escolhendo Astro, mesmo sendo menos conhecido?
+Criando esse projeto, não encontrei problema nenhum e achei a curva de aprendizado do Next.js até bem confortável. Mas é aí que entrou a questão: se eu usei o Next.js, gostei e me adaptei rápido, por que usar o Astro né?
 
-## O motivo da decisão
+## É isso
 
-Depois de pensar por um tempo, destrinchei minhas necessidades no que, quais ferramentas
-e como utilizaria elas para o projeto, foi aí que tive a clareza e tomei minha decisão,
-baseado na minha necessidade.
+Pensei um tempinho o que eu precisava.. foi aí que escolhi pensando na minha necessidade, que era simples
 
-O framework que eu deseja tinha que atender a certos pontos:
+O framework tinha que atender a certos pontos:
 
-1. **Suporte SSR**: Como meu principal foco e ponto principal na criação do meu blog é
-   performance, sem dúvidas utilizar sites estáticos é a melhor opção neste cenário.
+1. **Suporte SSG**: Como meu principal foco na criação do blog é performance, sem dúvidas usar sites estáticos é de longe a melhor opção
 
-2. **Suporte React**: Sou um desenvolvedor que utiliza React em todos meu projetos,
-   então ter suporte a React era o cenário ideal.
+2. **Suporte React**: Eu uso React em todos meus projetos, então ter suporte a React era um plus
 
-3. **Documentação**: Como eu não tinha experiência sólida em ambos os frameworks, ter
-   uma boa documentação para eu tirar minhas dúvidas caso precise era essencial,
-   para evitar dificuldades no meio do caminho.
+3. **Suporte Markdown**: Até então nunca tinha usado arquivos .md na criação de sites, mas depois de analisar uns casos na internet, vi que pra criação de um website como um blog, é muito útil ter criação de conteúdo através de arquivos .md, ainda mais se se for um site SSG
 
-4. **Suporte Markdown**: Até então nunca tinha utilizado arquivos .md na criação de sites,
-   mas depois de pensar e analisar casos na internet, vi que para a criação de um webiste como
-   um blog, é uma grande utilidade ter a criação de conteúdo através de arquivos .md, ainda mais
-   se tratando de um site SSR.
+Até ai tanto Astro como Next eram bons pra ser sincero
 
-Se parar para analisar, tanto Astro como Next atendem muito bem todos estes pontos.
+Mas não que isso tenha me deixado indeciso, a sacada foi ver o que cada framework me daria **além** do que eu precisava\
+Simplificando: um site que seja rápido e tenha suporte a arquivos .md, sem interatividade
 
-Mas isso não me deixou mais indeciso. A sacada foi ver o que cada framework oferece **além**
-do que eu realmente estava precisando.\
-Simplificando: Preciso de um site que seja rápido, e tenha suporte a arquivos .md, não
-vai ser algo com mímina interatividade, se existir.
-
-Aí que eliminei o Next.js da minha escolha. Pois vi que seria um "overkill" utilizar
-ele pra um simples projeto, eu não utilizaria rotas dinâmicas ou SSR no meu projeto, e todas
-outras ferramentas que ele oferece para a criação de um website complexo pra vendas e etc.\
+E aí eliminei o Next.js da minha escolha, seria overkill usar pra esse projeto simples, não teria rotas dinâmicas, API routes etc.\
 **Fiquei com Astro**.
 
-## Como eu me saí aprendendo Astro do zero
+## Como eu me saí aprendendo Astro
 
-Comecei. Abri a documentação no site deles e comecei com a criação.\
-Surpreendemente, foi muito mais fácil que qualquer outro framework que utilizei.
+Comecei, abri a documentação no site deles e comecei seco\
+E sinceramente, foi muito mais fácil que qualquer outro framework que usei(até porque ele de fato é mais simples, emfim)
 
-Aliás, um dos pontos que tinha levantado era o suporte com React, mas...\
-Não utilizei. Eu que estou a quase 3 anos apenas utilizando React em meus projetos, resolvi
-utilizar os arquivos .astro.
+Aliás, um dos pontos que tinha levantado era o suporte com React, mas
+não usei.\
+Eu que tô há quase 3 anos usando apenas React nos meus projetos, resolvi usar os arquivos .astro mesmo
 
-O motivo disso é a facilidade de criar toda coisa que eu precisava, performático e prático,
-sem sentir falta do React. Me adaptei muito rápido com a sintaxe do Astro e consegui
-criar minha aplicação e todas funcionalidades que desejava com facilidade.
+O motivo disso é a facilidade de criar tudo que eu precisava, performático e bem prático, sem sentir falta do React, me adaptei bem rápido com a sintaxe do Astro, consegui criar o projeto e todas funcionalidades que desejava bem rápido e sem bater muito a cabeça
 
-## O que brilhou meus olhos
+## O fator decisivo foi números
 
-Parece que o Astro se encaixou perfeitamente e supriu todas minhas necessidades,
-nada poderia ser melhor. Mas além disso, outras coisas me deixaram confiante nessa
-escolha, como por exemplo esse gráfico de comparação com outros frameworks:
+O Astro se encaixou certinho e supriu todas as necessidades. Além disso, outras coisas me deixaram confiante na escolha, como esse gráfico de comparação com outros frameworks:
 
 ![Astro](../../../public/cwvtest.png)
 
@@ -165,31 +137,17 @@ Astro Blog 2023 Web Framework Performance Report
 </a>
 </div>
 
-Como da pra ver, são ótimos resultados e que se sobrepõem muito bem com seus
-concorrentes.
+São ótimos resultados e da pra ver que se saiu muito bem relacionado aos concorrentes
 
-O teste **CWV** da primeira imagem é um teste com dados de pessoas do mundo real, é um jeito
-direto de ver como elas experenciam o site, principalmente entre longas sessões dentro
-dos sites.
+O teste **CWV** da primeira imagem é um teste com dados de pessoas do mundo real, é um jeito direto de ver como elas experienciam o site
 
-Já o teste **Lighthouse**, é mais focado para performance do primeiro carregamento da página,
-simplesmente o quão rápido a página carrega para o usuário poder utilizá-la.
-
-Nesse mesmo blog em que retirei estas informações possuem mais gráficos de outros testes,
-recomendo dar uma olhada, as informações são bem neutras e contando com todas condições
-levado em conta.
+Já o teste **Lighthouse** é mais focado pra performance do primeiro carregamento da página, basicamente o quão rápido a página carrega pro usuário poder usar
 
 ## Conclusão
 
-Bom, eu tive uma ótima experiência utilizando o Astro.js, e recomendo a todos
-que possam estar na mesma posição que eu estava antes de criar esse blog. Definitivamente
-vale a pena reservar pelo menos 1 hora para criar um projeto em Astro e sentir como é
-o desenvolvimento com ele.
+Tive uma ótima experiência usando o Astro.js e recomendo a todos que possam estar na mesma posição que eu tava antes de criar esse blog, definitivamente vale a pena reservar pelo menos 1 hora pra criar um projeto em Astro e sentir como é o desenvolvimento com ele
 
-E claro, esse site é feito completamente em Astro.js, você pode tirar suas próprias
-conclusões.
-
-👋
+E claro né, esse site é feito completamente em Astro então você pode tirar suas próprias conclusões e avaliar tudo que descrevi aqui
 
 </div>
 </div>

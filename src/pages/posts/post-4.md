@@ -2,7 +2,7 @@
 layout: "../../layouts/PostLayout.astro"
 title: "Criando uma rede social"
 author: Daniel Kondlatsch
-description: "Criando uma... rede social."
+description: "Criando uma... rede social - início"
 image:
   url: "https://eternizing-v2.vercel.app/"
   alt: "Eternizing Thumbnail"
@@ -73,37 +73,30 @@ img:last-child{
 <div class="markdownContent">
 <div class="markdownBase">
 
-# Criando uma rede social
+# Criando uma rede social - início
 
 <p class="postDate">26 de Julho, 2024</p>
 
-Talvez eu esteja um pouco tarde em dizer que comecei, pois dei início a este projeto já tem um tempo.. mas se
-comparar o tempo que ele pode levar para terminar, nunca é tarde..
 
-Ano passado, 2023, comecei um projeto "eternizing", no qual seria basicamente uma rede social, com o propósito de "eternizar"
-descobertas das pessoas, mais precisamente musicas e canais de youtube.
+Ano passado, em 2023, comecei o projeto "Mirsui", que seria basicamente uma rede social com o propósito de registrar descobertas das pessoas - mais precisamente músicas e canais do YouTube.
 
-Dessa forma, as pessoas podem salvar a música ou o artista que elas gostam, e deixar explícito e público a data em que elas já
-conheciam essa tal.</br>Assim, se uma música viralizasse no TikTok por exemplo, ela poderia mostrar que em seu perfil, ela já tinha
-reinvindicado essa música anos atras.
+A ideia é que as pessoas possam salvar a música ou artista que gostam e deixar explícito e público a data em que já conheciam aquilo.</br>Assim, se uma música viralizar no TikTok por exemplo, você pode mostrar no seu perfil que já tinha descoberto ela anos atrás.
 
-Essa é o resumo mais simples que posso fazer, mas emfim, eu desisti desse projeto pouco tempo depois que comecei, motivos pessoais
-que levaram a eu não ter tanta vontade em continuar algo que ainda estava no zero.
+Esse é o resumo mais simples que consigo fazer. Enfim, desisti do projeto pouco tempo depois que comecei - motivos pessoais que me levaram a não ter tanta vontade de continuar algo que ainda tava no zero.
 
-Mas agora, há pouco tempo, comecei o "eternizing-v2". Ressucitei essa idéia, mas voltei com mais conhecimento e vontade, e estou
-gostando do caminho que está levando até então.
+Mas recentemente, comecei o "Mirsui-v2". Ressuscitei a ideia, mas voltei com mais conhecimento e energia, e tô gostando do caminho que tá tomando até agora.
 
-## A stack que eu escolhi pra esse projeto ambicioso
+## A stack que escolhi pra esse projeto ambicioso
 
-Pela primeira vez estou usando Supabase para produção, tanto para database como para autenticação com supabase-auth.
-Next com Typescript. Comecei com Google Authentication e Google Firebase para armazenamento, mas felizmente migrei para Supabase.
+Pela primeira vez tô usando Supabase em produção, tanto pra database quanto pra autenticação com supabase-auth.
+Next.js com TypeScript. Comecei com Google Authentication e Firebase pra storage, mas felizmente migrei pro Supabase.
 
-Uma coisa que está me ajudando muito são as RPC do Supabase, resumidamente, posso deixar a lógica de consulta como uma function no Supabase, e no meu código
-posso chamar ela passando uma varíavel, assim ela me retorna, por exemplo, um select complexo, passando apenas um variável pelo código, separando bem
-a lógica e tirando um pouco a complexidade(e limitação) da linguagem do Supabase pelo próprio código.
+Uma coisa que tá me ajudando muito são as funções RPC do Supabase. Resumidamente, posso deixar a lógica de consulta como uma function no Supabase, e no meu código só chamar ela passando variáveis. Assim ela me retorna, por exemplo, um select complexo, sem precisar escrever queries gigantes no código - isso separa bem a lógica e contorna algumas limitações da query language do Supabase no frontend.
 
+## O que vem por aí
 
-Eternizing.
+O projeto ainda tá no começo, mas já tem a base funcionando. Autenticação, registro de músicas, sistema de perfis... tá tomando forma. Nos próximos posts vou compartilhar mais detalhes técnicos e updates conforme o projeto evolui.
+
 
 </div>
 </div>
